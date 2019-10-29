@@ -11,24 +11,24 @@
   <br/>
     <table class="table table-striped table-bordered">
       <tr>
-        <th>Resturant Name</th>
+        <th>Restaurant Name</th>
         <th>Address</th>
         <th>Phone;</th>
         <th>Website</th>
       </tr>      
-      <?php foreach ($Resturants as $Resturant): ?>
+      <?php foreach ($restaurants as $restaurant): ?>
       <tr>
         <td>
-          <?php echo $Resturant['restaurants_name']; ?> 
+          <?php echo $restaurant['restaurants_name']; ?> 
         </td>
         <td>
-          <?php echo $Resturant['restaurants_location_address']; ?> 
+          <?php echo $restaurant['restaurants_location_address']; ?> 
         </td>        
         <td>
-          <?php echo $Resturant['restaurants_phone_numbers']; ?> 
+          <?php echo $restaurant['restaurants_phone_numbers']; ?> 
         </td>        
         <td>
-          <?php echo $Resturant['restaurants_url']; ?> 
+          <?php echo $restaurant['restaurants_url']; ?> 
         </td>        
         <!-- <td>
           <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
