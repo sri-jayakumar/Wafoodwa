@@ -32,6 +32,43 @@ $action = "view_friend";        // default action
   
   <div class="container">
     <h1>Restaurants</h1>
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>Restaurant Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Website</th>
+      </tr>      
+      <?php foreach ($restaurants as $restaurant): ?>
+      <tr>
+        <td>
+          <?php echo $restaurant['restaurants_name']; ?> 
+        </td>
+        <td>
+          <?php echo $restaurant['restaurants_location_address']; ?> 
+        </td>        
+        <td>
+          <?php echo $restaurant['restaurants_phone_numbers']; ?> 
+        </td>        
+        <td>
+          <?php echo $restaurant['restaurants_url']; ?> 
+        </td>        
+        <!-- <td>
+          <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+            <input type="submit" value="Update" name="action"/>             
+            <input type="hidden" name="ResturantName" value="<?php echo $Resturant['ResturantName'] ?>" />
+          </form> 
+        </td>                        
+        <td>
+          <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+            <input type="submit" value="Delete" name="action" />        
+            <input type="hidden" name="ResturantName" value="<?php echo $Resturant['ResturantName'] ?>" />
+          </form>
+        </td>                                 -->
+      </tr>
+      <?php endforeach; ?>
+    </table>
+
 
 <?php     
 if ($_SERVER['REQUEST_METHOD'] == 'GET')
