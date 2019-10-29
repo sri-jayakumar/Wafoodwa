@@ -31,7 +31,7 @@ $action = "view_friend";        // default action
 <body>
   
   <div class="container">
-    <h1>Friendbook</h1>
+    <h1>Restaurants</h1>
 
 <?php     
 if ($_SERVER['REQUEST_METHOD'] == 'GET')
