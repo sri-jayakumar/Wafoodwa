@@ -32,6 +32,7 @@ $action = "view_friend";        // default action
   
   <div class="container">
     <h1>Restaurants</h1>
+    <h1>Restaurants</h1>
     <table class="table table-striped table-bordered">
       <tr>
         <th>Restaurant Name</th>
