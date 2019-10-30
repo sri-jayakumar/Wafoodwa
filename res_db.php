@@ -17,7 +17,7 @@
 //      execute() actually executes the SQL statement
 
 
-function getAllFriends()
+function getAllRestaurants()
 {
    global $db;
    $query = "SELECT * FROM 'restaurant' ";

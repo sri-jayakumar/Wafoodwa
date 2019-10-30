@@ -13,7 +13,7 @@
       <tr>
         <th>Restaurant Name</th>
         <th>Address</th>
-        <th>Phone;</th>
+        <th>Phone</th>
         <th>Website</th>
       </tr>      
       <?php foreach ($restaurants as $restaurant): ?>
