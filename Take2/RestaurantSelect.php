@@ -8,7 +8,7 @@
         return null;
     }
     // Form the SQL query (a SELECT query)
-    $sql="SELECT * FROM 'restaurant'";
+    $sql="SELECT * FROM restaurant";
     $result = mysqli_query($con,$sql);
     // Print the data from the table row by row
     while($row = mysqli_fetch_array($result)) {

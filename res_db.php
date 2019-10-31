@@ -20,7 +20,7 @@
 function getAllRestaurants()
 {
    global $db;
-   $query = "SELECT * FROM 'restaurant' ";
+   $query = "SELECT * FROM restaurant ";
    $statement = $db->prepare($query); 
    $statement->execute();
 

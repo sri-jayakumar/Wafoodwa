@@ -32,14 +32,7 @@ $action = "view_friend";        // default action
   
   <div class="container">
     <h1>Restaurants</h1>
-    <h1>Restaurants</h1>
     <table class="table table-striped table-bordered">
-      <tr>
-        <th>Restaurant Name</th>
-        <th>Address</th>
-        <th>Phone</th>
-        <th>Website</th>
-      </tr>      
       <?php foreach ($restaurants as $restaurant): ?>
       <tr>
         <td>
@@ -54,18 +47,6 @@ $action = "view_friend";        // default action
         <td>
           <?php echo $restaurant['restaurants_url']; ?> 
         </td>        
-        <!-- <td>
-          <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" value="Update" name="action"/>             
-            <input type="hidden" name="ResturantName" value="<?php echo $Resturant['ResturantName'] ?>" />
-          </form> 
-        </td>                        
-        <td>
-          <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" value="Delete" name="action" />        
-            <input type="hidden" name="ResturantName" value="<?php echo $Resturant['ResturantName'] ?>" />
-          </form>
-        </td>                                 -->
       </tr>
       <?php endforeach; ?>
     </table>
@@ -78,29 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
    include('restaurants.php');        // default action
    echo "<br/><hr/>";
 }
-// else if ($_SERVER['REQUEST_METHOD'] == 'POST')
-// {
-//    if (!empty($_POST['action']) && ($_POST['action'] == 'Update'))
-//    {
-//       $friendName_to_update = $_POST['friendName'];
-//       include('updateFriend_form.php');     
-//       if (!empty($_POST['phone']))
-//       {
-//          updateFriendPhone($friendName_to_update, $_POST['phone']);   
-//          header("Location: main.php?action=view_friend");
-//       }      
-//    }
-//    else if (!empty($_POST['action']) && ($_POST['action'] == 'Add'))
-//    {      
-//       addFriend($_POST['friendName'], $_POST['phone']);
-//       header("Location: main.php?action=view_friend");
-//    }
-//    else if (!empty($_POST['action']) && $_POST['action'] == 'Delete')
-//    {        
-//       deleteFriend($_POST['friendName']);
-//       header("Location: main.php?action=view_friend");
-//    }  
-// }
 ?>   
   </div>
  
