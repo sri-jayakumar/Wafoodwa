@@ -7,7 +7,7 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
     // Form the SQL query (an INSERT query)
-    $sql="INSERT INTO restaurants (restaurants_name, restaurants_location_address, restaurants_url)
+    $sql="INSERT INTO restaurant (restaurants_name, restaurants_location_address, restaurants_url)
     VALUES
     ('$_POST[restaurants_name]','$_POST[restaurants_location_address]','$_POST[restaurants_url]')";
 
