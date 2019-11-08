@@ -32,34 +32,31 @@ $action = "view_friend";        // default action
   
   <div class="container">
     <h1>Restaurants</h1>
-    <table class="table table-striped table-bordered">
-      <?php foreach ($restaurants as $restaurant): ?>
-      <tr>
-        <td>
-          <?php echo $restaurant['restaurants_name']; ?> 
-        </td>
-        <td>
-          <?php echo $restaurant['restaurants_location_address']; ?> 
-        </td>        
-        <td>
-          <?php echo $restaurant['restaurants_phone_numbers']; ?> 
-        </td>        
-        <td>
-          <?php echo $restaurant['restaurants_url']; ?> 
-        </td>        
-      </tr>
-      <?php endforeach; ?>
-    </table>
-
-
-<?php     
-if ($_SERVER['REQUEST_METHOD'] == 'GET')
-{
-   $restaurants = getAllRestaurants();
-   include('restaurants.php');        // default action
-   echo "<br/><hr/>";
-}
-?>   
+    <?php     
+      if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        $restaurants = getAllRestaurants();
+         include('restaurants.php');        // default action
+         echo "<br/><hr/>";
+         include('add_restaurant.html');
+      } else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+          if (!empty($_POST['action']) && ($_POST['action'] == 'Update')) {
+            $friendName_to_update = $_POST['friendName'];
+            include('updateFriend_form.php');     
+            if (!empty($_POST['phone'])) {
+                updateFriendPhone($friendName_to_update, $_POST['phone']);   
+                header("Location: main.php?action=view_friend");
+            }      
+          }
+          else if (!empty($_POST['action']) && ($_POST['action'] == 'Add')) {      
+            addRestaurant($_POST['restaurantName'], $_POST['phone']);
+            header("Location: main.php?action=view_friend");
+          }
+          else if (!empty($_POST['action']) && $_POST['action'] == 'Delete') {        
+            deleteFriend($_POST['friendName']);
+            header("Location: main.php?action=view_friend");
+          }  
+      }
+    ?>       
   </div>
  
 </body>

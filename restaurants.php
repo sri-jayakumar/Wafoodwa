@@ -30,18 +30,6 @@
         <td>
           <?php echo $restaurant['restaurants_url']; ?> 
         </td>        
-        <!-- <td>
-          <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" value="Update" name="action"/>             
-            <input type="hidden" name="ResturantName" value="<?php echo $Resturant['ResturantName'] ?>" />
-          </form> 
-        </td>                        
-        <td>
-          <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" value="Delete" name="action" />        
-            <input type="hidden" name="ResturantName" value="<?php echo $Resturant['ResturantName'] ?>" />
-          </form>
-        </td>                                 -->
       </tr>
       <?php endforeach; ?>
     </table>

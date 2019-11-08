@@ -33,4 +33,19 @@ function getAllRestaurants()
    return $results;
 }
 
+function addRestaurant($name, $phone)
+{
+   global $db;
+
+   
+   $query = "INSERT INTO restaurant (restaurants_name, restaurants_phone_numbers) VALUES ('testing', '111-111-1111')";
+   $statement = $db->prepare($query);
+   // $statement->bindValue(':name', $name);
+   // $statement->bindValue(':phone', $phone);
+   $statement->execute();     // if the statement is successfully executed, execute() returns true
+                              // false otherwise 
+
+   $statement->closeCursor();
+}
+
 ?>
