@@ -13,7 +13,7 @@ require('connect_db_pdo.php');      // include code to connect to a database
 require('res_db.php');           // include code to access and process a friend table 
 
 $action = "view_friend";        // default action
-?>
+?> 
 <?php     
       if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $restaurants = getAllRestaurants();
@@ -77,7 +77,7 @@ $action = "view_friend";        // default action
 		      </button>
 
 		      <!-- Text Logo -->
-		      <a class="navbar-brand" href="#">Biziness</a>
+		      <a class="navbar-brand" href="#">Wafoodwa</a>
 
 		      <!-- Image Logo -->
 		      <!-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a> -->
@@ -91,7 +91,7 @@ $action = "view_friend";        // default action
 			        <li><a href="#">HOME</a></li>
 			        <li><a href="#mu-about">ABOUT US</a></li>
 			        <li><a href="#mu-service">SERVICES</a></li>
-		            <li><a href="#mu-portfolio">PORTFOLIO</a></li>
+		            <li><a href="#mu-portfolio">Restaurants</a></li>
 		            <li><a href="#mu-team">TEAM</a></li>
 		            <li><a href="#mu-clients">OUR CLIENTS</a></li>
 		            <li><a href="#mu-contact">CONTACT</a></li>
@@ -158,7 +158,6 @@ $action = "view_friend";        // default action
 				<div class="row">
 					<div class="col-md-12">
 						<div class="mu-portfolio-area">
-
 							<div class="mu-portfolio-header">
 								<h2 class="mu-heading-title"><span>RESTAURANTS</span></h2>
 								<span class="mu-header-dot"></span>
@@ -183,7 +182,7 @@ $action = "view_friend";        // default action
 								<div class="filtr-container">
 									<?php foreach ($restaurants as $restaurant): ?>
 										<div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="1">
-											<a class="mu-imglink" href="assets/images/portfolio/img-1.jpeg" title=<?php echo $restaurant['restaurants_name'];?>>
+											<a href="reviews.php" title=<?php echo $restaurant['restaurants_name'];?>>
 												<img class="img-responsive" src="assets/images/portfolio/img-1.jpeg" alt="image">
 												<div class="mu-filter-item-content">
 													<h4 class="mu-filter-item-title"><?php echo $restaurant['restaurants_name'];?></h4>
