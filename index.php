@@ -16,7 +16,10 @@ $action = "view_friend";        // default action
 ?>
 <?php     
       if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $restaurants = getAllRestaurants();
+		$restaurants = getAllRestaurants();
+		$types = getAllTypes();
+		$count = 1;
+		$typeToArray = new \stdClass();
 	  }
 ?>
 <!DOCTYPE html>
@@ -65,7 +68,7 @@ $action = "view_friend";        // default action
 	  <!-- Start Header -->
 	<header id="mu-header" class="" role="banner">
 		<div class="container">
-			<nav class="navbar navbar-default mu-navbar">
+			<nav class="navbar navbar-default navbar-fixed-top mu-fixed-nav" style="background-color:black;">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -77,7 +80,7 @@ $action = "view_friend";        // default action
 		      </button>
 
 		      <!-- Text Logo -->
-		      <a class="navbar-brand" href="#">Biziness</a>
+		      <a class="navbar-brand" href="#">Wafoodwa</a>
 
 		      <!-- Image Logo -->
 		      <!-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a> -->
@@ -89,8 +92,6 @@ $action = "view_friend";        // default action
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
 			        <li><a href="#">HOME</a></li>
-			        <li><a href="#mu-about">ABOUT US</a></li>
-			        <li><a href="#mu-service">SERVICES</a></li>
 		            <li><a href="#mu-portfolio">PORTFOLIO</a></li>
 		            <li><a href="#mu-team">TEAM</a></li>
 		            <li><a href="#mu-clients">OUR CLIENTS</a></li>
@@ -168,13 +169,16 @@ $action = "view_friend";        // default action
 							<!-- Start Portfolio Filter -->
 							<div class="mu-portfolio-filter-area">
 								<ul class="mu-simplefilter">
-					                <li class="active" data-filter="all">All</li>
-					                <li data-filter="1">Web App</li>
-					                <li data-filter="2">UI/UX</li>
-					                <li data-filter="3">Graphics Design</li>
-					                <li data-filter="4">Mobile App</li>
-					                <li data-filter="5">Branding</li>
-					                <li data-filter="6">Marketing</li>
+									<li class="active" data-filter="all">All</li>
+									<?php foreach ($types as $type):?>
+										<?php if(!empty($type)){ ?>
+											<li data-filter=<?php echo $count?>><?php echo $type?></li>
+											<?php
+												$typeToArray->$type = $count;  
+												$count++;
+											?>
+										<?php }?>
+									<?php endforeach; ?>
 					            </ul>
 							</div>
 
@@ -182,11 +186,27 @@ $action = "view_friend";        // default action
 							<div class="mu-portfolio-content">
 								<div class="filtr-container">
 									<?php foreach ($restaurants as $restaurant): ?>
-										<div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="1">
-											<a class="mu-imglink" href="assets/images/portfolio/img-1.jpeg" title=<?php echo $restaurant['restaurants_name'];?>>
-												<img class="img-responsive" src="assets/images/portfolio/img-1.jpeg" alt="image">
+										<?php
+											$thumbnail = $restaurant['restaurants_featured_image'];
+											$name = $restaurant['restaurants_name'];
+											$establishment = $restaurant['restaurants_establishment'];
+											if(!empty($establishment)){
+												$category = $typeToArray->$establishment;
+											} else {
+												$category = "1";
+											}
+										?>
+										<div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category=<?php echo $category;?>>
+											<a class="mu-imglink" href=<?php echo $thumbnail;?> title=<?php echo $name;?>>
+												<img class="img-responsive" src=<?php 
+														if(empty($thumbnail)){
+															echo "assets/images/portfolio/img-1.jpeg";
+														} else {
+															echo $thumbnail;
+														};
+													?> alt="image" style="height:280px;width:640px;">
 												<div class="mu-filter-item-content">
-													<h4 class="mu-filter-item-title"><?php echo $restaurant['restaurants_name'];?></h4>
+													<h4 class="mu-filter-item-title"><?php echo $name;?></h4>
 												</div>
 											</a>
 										</div>
