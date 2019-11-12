@@ -15,7 +15,7 @@
 //                and replaces it with the actual value from $name.
 //                Thus, be sure to match the name; a mismatch is ignored. 
 //      execute() actually executes the SQL statement
-
+ 
 
 function getAllRestaurants()
 {
@@ -33,11 +33,21 @@ function getAllRestaurants()
    return $results;
 }
 
+function getAllReviews($restaurant)
+{
+   global $db;
+   $query = "SELECT * FROM review WHERE restaurant_name = $restaurant";
+   $statement = $db->prepare($query); 
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closecursor();
+   return $results;
+}
+
 function addRestaurant($name, $phone)
 {
    global $db;
 
-   
    $query = "INSERT INTO restaurant (restaurants_name, restaurants_phone_numbers) VALUES ('testing', '111-111-1111')";
    $statement = $db->prepare($query);
    // $statement->bindValue(':name', $name);
