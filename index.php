@@ -1,19 +1,16 @@
 <?php
-
 // include -- include code from a specified php file into this file
 //            if the specified file is not found, include produces a warning message
 //            the rest of the script will run 
 // include('connect_db_pdo.php');
 // include('friend_db.php');
-
 // require -- include code from a specified php file into this file
 //            if the specified file is not found, require produces a fatal error
 //            the rest of the script won't run
 require('connect_db_pdo.php');      // include code to connect to a database      
 require('res_db.php');           // include code to access and process a friend table 
-
 $action = "view_friend";        // default action
-?> 
+?>
 <?php     
       if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		$restaurants = getAllRestaurants();
@@ -92,9 +89,6 @@ $action = "view_friend";        // default action
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
 			        <li><a href="#">HOME</a></li>
-			        <li><a href="#mu-about">ABOUT US</a></li>
-			        <li><a href="#mu-service">SERVICES</a></li>
-		            <li><a href="#mu-portfolio">Restaurants</a></li>
 		            <li><a href="#mu-portfolio">PORTFOLIO</a></li>
 		            <li><a href="#mu-team">TEAM</a></li>
 		            <li><a href="#mu-clients">OUR CLIENTS</a></li>
@@ -162,6 +156,7 @@ $action = "view_friend";        // default action
 				<div class="row">
 					<div class="col-md-12">
 						<div class="mu-portfolio-area">
+
 							<div class="mu-portfolio-header">
 								<h2 class="mu-heading-title"><span>RESTAURANTS</span></h2>
 								<span class="mu-header-dot"></span>
@@ -188,9 +183,6 @@ $action = "view_friend";        // default action
 							<div class="mu-portfolio-content">
 								<div class="filtr-container">
 									<?php foreach ($restaurants as $restaurant): ?>
-										<div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="1">
-											<a href="reviews.php" title=<?php echo $restaurant['restaurants_name'];?>>
-												<img class="img-responsive" src="assets/images/portfolio/img-1.jpeg" alt="image">
 										<?php
 											$thumbnail = $restaurant['restaurants_featured_image'];
 											$name = $restaurant['restaurants_name'];
@@ -202,7 +194,7 @@ $action = "view_friend";        // default action
 											}
 										?>
 										<div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category=<?php echo $category;?>>
-											<a class="mu-imglink" href=<?php echo $thumbnail;?> title=<?php echo $name;?>>
+											<a class="mu-imglink" href="reviews.php" title=<?php echo $name;?>>
 												<img class="img-responsive" src=<?php 
 														if(empty($thumbnail)){
 															echo "assets/images/portfolio/img-1.jpeg";

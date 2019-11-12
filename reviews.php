@@ -1,24 +1,3 @@
-<?php
-
-// include -- include code from a specified php file into this file
-//            if the specified file is not found, include produces a warning message
-//            the rest of the script will run 
-// include('connect_db_pdo.php');
-// include('friend_db.php');
-
-// require -- include code from a specified php file into this file
-//            if the specified file is not found, require produces a fatal error
-//            the rest of the script won't run
-require('connect_db_pdo.php');      // include code to connect to a database      
-require('res_db.php');           // include code to access and process a friend table 
-
-$action = "view_friend";        // default action
-?> 
-<?php     
-      if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $reviews = getAllReviews("Doma");
-	  }
-?>
 <!DOCTYPE html>
 <html>
 <head>
