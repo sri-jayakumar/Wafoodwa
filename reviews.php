@@ -1,4 +1,5 @@
 <?php
+
 // include -- include code from a specified php file into this file
 //            if the specified file is not found, include produces a warning message
 //            the rest of the script will run 
