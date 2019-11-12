@@ -33,15 +33,22 @@ function getAllRestaurants()
    return $results;
 }
 
-function getAllReviews($restaurant)
-{
+function getAllTypes(){
    global $db;
-   $query = "SELECT * FROM review WHERE restaurant_name = $restaurant";
-   $statement = $db->prepare($query); 
-   $statement->execute();
-   $results = $statement->fetchAll();
+   $query = "SELECT DISTINCT restaurants_establishment FROM restaurant ";
+   $typeArray = Array();
+   $statement = $db->query($query);
+
+   // fetchAll() returns an array for all of the rows in the result set
+   // $results = $statement->fetchAll();
+   while($result = $statement->fetch(PDO::FETCH_ASSOC)){
+      $typeArray[] = $result['restaurants_establishment'];
+   }
+
+   // closes the cursor and frees the connection to the server so other SQL statements may be issued 
    $statement->closecursor();
-   return $results;
+
+   return $typeArray;
 }
 
 function addRestaurant($name, $phone)
