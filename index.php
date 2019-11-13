@@ -194,7 +194,7 @@ $action = "view_friend";        // default action
 											}
 										?>
 										<div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category=<?php echo $category;?>>
-											<a class="mu-imglink" href="reviews.php" title=<?php echo $name;?>>
+											<a href="reviews.php" title=<?php echo $name;?>>
 												<img class="img-responsive" src=<?php 
 														if(empty($thumbnail)){
 															echo "assets/images/portfolio/img-1.jpeg";
