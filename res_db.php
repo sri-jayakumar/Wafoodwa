@@ -82,4 +82,18 @@ function addRestaurant($name, $phone)
    $statement->closeCursor();
 }
 
+function addReview($email, $review)
+{
+   global $db;
+
+   $query = "INSERT INTO review (student_email, review_text) VALUES ('s2k@virginia.edu', 'nom yumz')";
+   $statement = $db->prepare($query);
+   // $statement->bindValue(':name', $name);
+   // $statement->bindValue(':phone', $phone);
+   $statement->execute();     // if the statement is successfully executed, execute() returns true
+                              // false otherwise 
+
+   $statement->closeCursor();
+}
+
 ?>
