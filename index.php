@@ -160,7 +160,7 @@ $action = "view_friend";        // default action
 							<div class="mu-portfolio-header">
 								<h2 class="mu-heading-title"><span>RESTAURANTS</span></h2>
 								<span class="mu-header-dot"></span>
-								<p>Restaurants in the Charlotessville area</p>
+								<p>Restaurants in the Charlottesville area</p>
 							</div>
 
 							<!-- Start Portfolio Filter -->
@@ -194,7 +194,7 @@ $action = "view_friend";        // default action
 											}
 										?>
 										<div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category=<?php echo $category;?>>
-											<a href="reviews.php" title=<?php echo $name;?>>
+											<a href=<?php echo "reviews.php?" . urlencode($name)?> title=<?php echo $name;?>>
 												<img class="img-responsive" src=<?php 
 														if(empty($thumbnail)){
 															echo "assets/images/portfolio/img-1.jpeg";

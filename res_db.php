@@ -33,6 +33,23 @@ function getAllRestaurants()
    return $results;
 }
 
+function getSpecificRestaurant($rest)
+{
+   global $db;
+   $rest = urldecode($rest);
+   $query = "SELECT * FROM restaurant WHERE restaurants_name = " . "\"" . $rest . "\"";
+   $statement = $db->prepare($query); 
+   $statement->execute();
+
+   // fetchAll() returns an array for all of the rows in the result set
+   $results = $statement->fetchAll();
+
+   // closes the cursor and frees the connection to the server so other SQL statements may be issued 
+   $statement->closecursor();
+
+   return $results;
+}
+
 function getAllTypes(){
    global $db;
    $query = "SELECT DISTINCT restaurants_establishment FROM restaurant ";
