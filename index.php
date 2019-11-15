@@ -108,7 +108,6 @@ $action = "view_friend";        // default action
 		<div class="row">
 			<div class="col-md-12">
 				<div class="mu-featured-slide">
-<<<<<<< HEAD
 
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
@@ -127,7 +126,7 @@ $action = "view_friend";        // default action
 						<div class="mu-featured-slider-content">
 							<h1>Basic Mediterranean Bistro</h1>
 							<p>
-								"One of the best dining experiences ever! I frequent Basil for lunch and 
+								"One of tgithe best dining experiences ever! I frequent Basil for lunch and 
 								dinner with friends. The menu has so much to offer and the waitstaff is incredible! 
 								Definitely worth the visit if you've never been!" - John B.
 							</p>
@@ -148,23 +147,6 @@ $action = "view_friend";        // default action
 					</div>
 					<!-- End Single slide -->
 
-=======
-				<?php foreach ($toprestaurants as $restaurant): ?>
-					<?php
-						$thumbnail = $restaurant['restaurants_featured_image'];
-						$name = $restaurant['restaurants_name'];
-						$topthreecounter = $topthreecounter + 1; 
-					?>
-					<div class="mu-featured-slider-single">
-						<img src=<?php echo $thumbnail;?>>
-						<div class="mu-featured-slider-content">
-							<h1><?php echo $name;?></h1>
-							<p>Ranked Number <?php echo $topthreecounter;?> in Charlottesville</p>
-							<a href=<?php echo "reviews.php?" . urlencode($name)?> class="mu-primary-btn"> Learn More </a>
-						</div>
-					</div>
-					<?php endforeach; ?>
->>>>>>> a43121709e640e93951a8cb392a48a1b34ec45cd
 				</div>
 			</div>			
 		</div>
