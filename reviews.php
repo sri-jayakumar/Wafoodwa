@@ -11,19 +11,15 @@ require('connect_db_pdo.php');      // include code to connect to a database
 require('res_db.php');           // include code to access and process a friend table 
 $action = "view_friend";        // default action
 ?>
-<?php   
-	$name = $_SERVER['QUERY_STRING'];  
-	$onerest = getSpecificRestaurant($name);
-?>
-
 <?php
 	$name = $_SERVER['QUERY_STRING'];
+	$onerest = getSpecificRestaurant($name);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />  
-	<title>Restaurant Name</title>
+	<title>Reviews</title>
 </head>
 <body>
 	<div class="container">
@@ -32,11 +28,20 @@ $action = "view_friend";        // default action
 			<p><?php echo $restaurant['restaurants_name']; ?> </p>
 		<?php endforeach; ?>
 		</font></b>
+
 		<?php foreach ($onerest as $restaurant): ?>
-			<p><?php echo $restaurant['restaurants_featured_image']; ?> </p>
+			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?> </p>
+			<img class="img-responsive" src=<?php 
+				if(empty($thumbnail)){
+					echo "assets/images/portfolio/img-1.jpeg";
+				} else {
+					echo $thumbnail;
+				};
+			?> alt="image" style="height:280px;width:640px;">
 		<?php endforeach; ?>
 		<h1><font size="5">Details</font></h1>
 		<?php foreach ($onerest as $restaurant): ?>
+
 		<table width="500px" height="100px">
   			<tr>
     			<td align="left">Restaurant Address</td> 
@@ -63,19 +68,11 @@ $action = "view_friend";        // default action
     			</td>
   			</tr>
 		</table>
-		<!--
-    	<?php echo $restaurant['restaurants_menu_url']; ?>
-		<?php endforeach; ?>
-		-->
-		<h2> </h2>
-		<h2> </h2>
-		<h1><font size="5">Reviews</font></h1>
-		<form> 
-	<title>Reviews</title>
-</head>
-<body>
+	<?php endforeach; ?>
+	</div>
+
 	<div class="container">
-		<h1> Restaurant Name </h1>
+		<h1><font size="5">Reviews</font></h1>
 		<form action = "reviews_db.php" method="POST"> 
 			<div class="form-group">
 				<p><label for="rating">Rating</label> 
@@ -90,17 +87,6 @@ $action = "view_friend";        // default action
 			<button type="submit" class="btn btn-primary my-1">Submit</button>
 			<input type="hidden" name="restaurant_name" value=<?php echo $name?> id="restaurant_name">
 		</form>
-		<hr> 
-		<p> All reviews </p>
-		<!--
-		<div class="filtr-container">
-			<?php foreach ($reviews as $review): ?>
-				<h4><?php echo $review['student_email'];?></h4>
-				<h4><?php echo $review['rating'];?></h4>
-			<?php endforeach; ?>
-        </div>
-    	-->
-
 	</div>
 </body>
 </html>
