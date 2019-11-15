@@ -89,9 +89,9 @@ $action = "view_friend";        // default action
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
 			        <li><a href="#">HOME</a></li>
-		            <li><a href="#mu-portfolio">PORTFOLIO</a></li>
-		            <li><a href="#mu-team">TEAM</a></li>
-		            <li><a href="#mu-clients">OUR CLIENTS</a></li>
+		            <li><a href="profile.php">PROFILE</a></li>
+		            <li><a href="login.html">LOGIN</a></li>
+		            <li><a href="signup.php">SIGNUP</a></li>
 		            <li><a href="#mu-contact">CONTACT</a></li>
 		      	</ul>
 		    </div><!-- /.navbar-collapse -->
