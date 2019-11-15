@@ -124,9 +124,9 @@ $action = "view_friend";        // default action
 					<div class="mu-featured-slider-single">
 						<img src="assets/images/basil.jpg">
 						<div class="mu-featured-slider-content">
-							<h1>Basic Mediterranean Bistro</h1>
+							<h1>Basil Mediterranean Bistro</h1>
 							<p>
-								"One of tgithe best dining experiences ever! I frequent Basil for lunch and 
+								"One of the best dining experiences ever! I frequent visit Basil for lunch and 
 								dinner with friends. The menu has so much to offer and the waitstaff is incredible! 
 								Definitely worth the visit if you've never been!" - John B.
 							</p>
