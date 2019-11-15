@@ -11,6 +11,9 @@ require('connect_db_pdo.php');      // include code to connect to a database
 require('res_db.php');           // include code to access and process a friend table 
 $action = "view_friend";        // default action
 ?>
+<?php
+	$name = $_SERVER['QUERY_STRING'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +36,7 @@ $action = "view_friend";        // default action
 			    <textarea class="form-control" id="exampleFormControlTextarea1" name="review_text" placeholder="Write your review here" rows="3"></textarea>
 			</div>
 			<button type="submit" class="btn btn-primary my-1">Submit</button>
-			<input type="hidden" name="restaurant_name" value="actual_restaurant_name" id="restaurant_name">
+			<input type="hidden" name="restaurant_name" value=<?php echo $name?> id="restaurant_name">
 		</form>
 	</div>
 </body>
