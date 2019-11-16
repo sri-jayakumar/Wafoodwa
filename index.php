@@ -90,7 +90,7 @@ $action = "view_friend";        // default action
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
 			        <li><a href="#">HOME</a></li>
 		            <li><a href="profile.php">PROFILE</a></li>
-		            <li><a href="login.html">LOGIN</a></li>
+		            <li><a href="login.php">LOGIN</a></li>
 		            <li><a href="signup.php">SIGNUP</a></li>
 		            <li><a href="#mu-contact">CONTACT</a></li>
 		      	</ul>
