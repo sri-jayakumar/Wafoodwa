@@ -15,6 +15,8 @@ $action = "view_friend";        // default action
       if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		$restaurants = getAllRestaurants();
 		$types = getAllTypes();
+		$toprestaurants = getTopThree(); 
+		$topthreecounter = 0; 
 		$count = 1;
 		$typeToArray = new \stdClass();
 	  }
@@ -102,7 +104,6 @@ $action = "view_friend";        // default action
 	<!-- End Header -->
 
 	<!-- Start Featured Slider -->
-
 	<section id="mu-featured-slider">
 		<div class="row">
 			<div class="col-md-12">
@@ -110,33 +111,38 @@ $action = "view_friend";        // default action
 
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
-						<img src="assets/images/slider-img-1.jpg">
+						<img src="assets/images/restaurants.jpg">
 						<div class="mu-featured-slider-content">
-							<h1>WELCOME TO BIZINESS</h1>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							<a href="#" class="mu-primary-btn">CONTACT US</a>
+							<h1>WELCOME TO WAFOODWA</h1>
+							<p>Your perfect retaurant review application.</p>
+							<a href="#mu-portfolio" class="mu-primary-btn">Explore the Restaurants</a>
 						</div>
 					</div>
 					<!-- End Single slide -->
 
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
-						<img src="assets/images/slider-img-2.jpg">
+						<img src="assets/images/basil.jpg">
 						<div class="mu-featured-slider-content">
-							<h1>WE PROMOTE YOUR BUSINESS</h1>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							<a href="#" class="mu-primary-btn">CONTACT US</a>
+							<h1>Basil Mediterranean Bistro</h1>
+							<p>
+								"One of the best dining experiences ever! I frequent visit Basil for lunch and 
+								dinner with friends. The menu has so much to offer and the waitstaff is incredible! 
+								Definitely worth the visit if you've never been!" - John B.
+							</p>
 						</div>
 					</div>
 					<!-- End Single slide -->
 
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
-						<img src="assets/images/slider-img-3.jpg">
+						<img src="assets/images/bodos.jpg">
 						<div class="mu-featured-slider-content">
-							<h1>FREE ONE PAGE TEMPLATE</h1>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							<a href="#" class="mu-primary-btn">CONTACT US</a>
+							<h1>Bodo's Bagels Bakery</h1>
+							<p>
+								"A local favorite! Love how warm and fresh their bagels are. 
+								Can't go wrong here." - Tricia C.
+							</p>
 						</div>
 					</div>
 					<!-- End Single slide -->
