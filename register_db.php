@@ -25,15 +25,15 @@ if (isset($_POST['reg_user'])) {
   if (empty($email)) { array_push($errors, "Email is required"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
+	 array_push($errors, "The two passwords do not match");
   }
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM student WHERE email='$email' LIMIT 1";
+  $user_check_query = "SELECT * FROM student WHERE email='$email' OR username= '$username' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
-  
+
   if ($user) { // if user exists
     if ($user['username'] === $username) {
       array_push($errors, "Username already exists");
@@ -48,10 +48,13 @@ if (isset($_POST['reg_user'])) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
   	$query = "INSERT INTO student (username, email, password, year, name, food_preference) VALUES('$username', '$email', '$password', '2020', 'Martha', 'Chinese')";
-    mysqli_query($db, $query);
+    $statement = $db->prepare($query);
+    $statement->execute();
+
+    $statement->closeCursor();
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
-    header("Location: ./index.php?signup=success");
+    echo "welcome new user";
     // so page successfully redirects here, but user is not saved to database
   }
 }
