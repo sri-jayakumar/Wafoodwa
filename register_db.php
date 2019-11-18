@@ -54,7 +54,7 @@ if (isset($_POST['reg_user'])) {
     $statement->closeCursor();
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
-    echo "welcome new user";
+    header("Location: ./index.php?signup=success");
     // so page successfully redirects here, but user is not saved to database
   }
 }

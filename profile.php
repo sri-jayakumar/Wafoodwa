@@ -21,9 +21,6 @@ require('res_db.php');           // include code to access and process a friend 
 	<title>User Profile</title>
 </head>
 <body>
-	<div class = "container">
-		<h2> Hello, person name </h2>
-	</div>
 	<div class="content">
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
