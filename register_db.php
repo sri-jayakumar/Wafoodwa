@@ -48,6 +48,7 @@ if (isset($_POST['reg_user'])) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
   	$query = "INSERT INTO student (username, email, password, year, name, food_preference) VALUES('$username', '$email', '$password', '2020', 'Martha', 'Chinese')";
+
     $statement = $db->prepare($query);
     $statement->execute();
 
