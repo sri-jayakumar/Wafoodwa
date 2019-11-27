@@ -14,7 +14,7 @@ body {
   font-size: 120%;
   background: #F8F8FF;
 }
-
+ 
 .header {
   width: 30%;
   margin: 50px auto 0px;
@@ -74,9 +74,9 @@ form, .content {
   border: 1px solid #3c763d;
   margin-bottom: 20px;
 }
+</style>
 
-  </style>
-  <title>Registration system PHP and MySQL</title>
+<title>Registration system PHP and MySQL</title>
 </head>
 <body>
   <div class="header">
@@ -84,14 +84,13 @@ form, .content {
   </div>
 	
   <form method="post" action="register_db.php">
-  	<?php include('errors.php'); ?>
     <div class="input-group">
       <label>Username</label>
-      <input type="text" name="username" value="<?php echo $username; ?>">
+      <input type="text" name="username">
     </div>
   	<div class="input-group">
   	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	  <input type="email" name="email">
   	</div>
   	<div class="input-group">
   	  <label>Password</label>

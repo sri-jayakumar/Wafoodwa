@@ -19,7 +19,7 @@ $action = "view_friend";        // default action
 		$topthreecounter = 0; 
 		$count = 1;
 		$typeToArray = new \stdClass();
-	  }
+	  } 
 ?>
 <?php 
   session_start(); 
@@ -119,6 +119,7 @@ $action = "view_friend";        // default action
       <div class="error success" >
       	<h3>
           <?php 
+          	echo "error alert";
           	echo $_SESSION['success']; 
           	unset($_SESSION['success']);
           ?>
