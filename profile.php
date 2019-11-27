@@ -56,6 +56,10 @@ require('res_db.php');           // include code to access and process a friend 
     margin-top: 8%;
   }
 
+  img{
+    width: 20%;
+  }
+
 </style>
 </head>
 <body>
@@ -95,6 +99,7 @@ require('res_db.php');           // include code to access and process a friend 
     </div>
   </header>
 	<div class="content container">
+    <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
@@ -109,7 +114,7 @@ require('res_db.php');           // include code to access and process a friend 
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong>! </p>
     	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 </div>
