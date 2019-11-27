@@ -19,7 +19,20 @@ $action = "view_friend";        // default action
 		$topthreecounter = 0; 
 		$count = 1;
 		$typeToArray = new \stdClass();
-	  }
+	  } 
+?>
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,9 +104,9 @@ $action = "view_friend";        // default action
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
 			        <li><a href="#">HOME</a></li>
-		            <li><a href="#mu-portfolio">PORTFOLIO</a></li>
-		            <li><a href="#mu-team">TEAM</a></li>
-		            <li><a href="#mu-clients">OUR CLIENTS</a></li>
+		            <li><a href="profile.php">PROFILE</a></li>
+		            <li><a href="login.php">LOGIN</a></li>
+		            <li><a href="signup.php">SIGNUP</a></li>
 		            <li><a href="#mu-contact">CONTACT</a></li>
 		      	</ul>
 		    </div><!-- /.navbar-collapse -->
@@ -102,6 +115,22 @@ $action = "view_friend";        // default action
 		</div>
 	</header>
 	<!-- End Header -->
+	<?php if (isset($_SESSION['success'])) : ?>
+      <div class="error success" >
+      	<h3>
+          <?php 
+          	echo "error alert";
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php endif ?>
+
+    <!-- logged in user information -->
+    <?php  if (isset($_SESSION['username'])) : ?>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    <?php endif ?>
 
 	<!-- Start Featured Slider -->
 	<section id="mu-featured-slider">
