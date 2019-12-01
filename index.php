@@ -41,9 +41,9 @@ $action = "view_friend";        // default action
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Biziness : Home</title>
+    <title>Wafoodwa</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="assets/imges/favicon.ico"/>
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Line icon -->
@@ -107,7 +107,8 @@ $action = "view_friend";        // default action
 		            <li><a href="profile.php">PROFILE</a></li>
 		            <li><a href="login.php">LOGIN</a></li>
 		            <li><a href="signup.php">SIGNUP</a></li>
-		            <li><a href="#mu-contact">CONTACT</a></li>
+					<li><a href="#mu-portfolio">RESTAURANTS</a></li>
+		            <li><a href="#mu-team">OUR TEAM</a></li>
 		      	</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -265,7 +266,7 @@ $action = "view_friend";        // default action
 							<div class="mu-team-header">
 								<h2 class="mu-heading-title">OUR <span>TEAM</span></h2>
 								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<p>The developers responsible for making this website.</p>
 							</div>
 
 							<!-- Start Team Content -->
@@ -284,19 +285,56 @@ $action = "view_friend";        // default action
 												</div>
 											</div>
 											<div class="mu-team-info">
-												<h4>Alice Boga</h4>
-												<span>Graphics Designer</span>
+												<h4>Sri Jayakumar</h4>
+												<span></span>
 											</div>
-											
+										</div>
+									</div>
+									<!-- / Team Single Content -->
+									
+									<!-- Team Single Content -->
+									<div class="col-sm-6 col-md-4">
+										<div class="mu-team-content-single">
+											<div class="mu-team-profile">
+												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<div class="mu-team-social-info">
+													<a href="#"><i class="icon-social-facebook"></i></a>
+													<a href="#"><i class="icon-social-twitter"></i></a>
+													<a href="#"><i class="icon-social-linkedin"></i></a>
+												</div>
+											</div>
+											<div class="mu-team-info">
+												<h4>Jane Kim</h4>
+												<span></span>
+											</div>
+										</div>
+									</div>
+									<!-- / Team Single Content -->
+									
+									<!-- Team Single Content -->
+									<div class="col-sm-6 col-md-4">
+										<div class="mu-team-content-single">
+											<div class="mu-team-profile">
+												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<div class="mu-team-social-info">
+													<a href="#"><i class="icon-social-facebook"></i></a>
+													<a href="#"><i class="icon-social-twitter"></i></a>
+													<a href="#"><i class="icon-social-linkedin"></i></a>
+												</div>
+											</div>
+											<div class="mu-team-info">
+												<h4>Helen Lin</h4>
+												<span></span>
+											</div>
 										</div>
 									</div>
 									<!-- / Team Single Content -->
 
-									<!-- Service Single Content -->
+									<!-- Team Single Content -->
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-2.jpg" alt="team member">
+												<img src="assets/images/team-member-1.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -304,18 +342,18 @@ $action = "view_friend";        // default action
 												</div>
 											</div>
 											<div class="mu-team-info">
-												<h4>Jhon Doe</h4>
-												<span>Web Developer</span>
+												<h4>Nikhil Ramachandran</h4>
+												<span></span>
 											</div>
 										</div>
 									</div>
-									<!-- / Service Single Content -->
-
-									<!-- Service Single Content -->
+									<!-- / Team Single Content -->
+									
+									<!-- Team Single Content -->
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-3.jpg" alt="team member">
+												<img src="assets/images/team-member-1.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -323,14 +361,31 @@ $action = "view_friend";        // default action
 												</div>
 											</div>
 											<div class="mu-team-info">
-												<h4>Emma Watson</h4>
-												<span>Digital Marketer</span>
+												<h4>Amani Vohra</h4>
+												<span></span>
 											</div>
 										</div>
 									</div>
-									<!-- / Service Single Content -->
-
-
+									<!-- / Team Single Content -->
+									
+									<!-- Team Single Content -->
+									<div class="col-sm-6 col-md-4">
+										<div class="mu-team-content-single">
+											<div class="mu-team-profile">
+												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<div class="mu-team-social-info">
+													<a href="#"><i class="icon-social-facebook"></i></a>
+													<a href="#"><i class="icon-social-twitter"></i></a>
+													<a href="#"><i class="icon-social-linkedin"></i></a>
+												</div>
+											</div>
+											<div class="mu-team-info">
+												<h4>Selinie Wang</h4>
+												<span></span>
+											</div>
+										</div>
+									</div>
+									<!-- / Team Single Content -->
 								</div>
 							</div>
 							<!-- End Team Content -->
@@ -341,189 +396,6 @@ $action = "view_friend";        // default action
 			</div>
 		</section>
 		<!-- End Team -->
-
-		<!-- Start Testimonials -->
-		<section id="mu-testimonials">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-testimonials-area">
-							<h2 class="mu-heading-title">Client <span>Testimonials</span></h2>
-
-							<div class="mu-testimonials-block">
-								<ul class="mu-testimonial-slide">
-
-									<li>
-										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
-										<h5 class="mu-ct-name"> - Jhon Doe</h5>
-										<span class="mu-ct-title">CEO, Apple Inc.</span>
-									</li>
-
-									<li>
-										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
-										<h5 class="mu-ct-name"> - Alice Boga</h5>
-										<span class="mu-ct-title">Director, Google Inc.</span>
-									</li>
-
-									<li>
-										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
-										<h5 class="mu-ct-name"> - Jhon Smith</h5>
-										<span class="mu-ct-title">Web Developer</span>
-									</li>
-
-								</ul>
-							</div>
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Testimonials -->
-
-		
-		<!-- Start Clients -->
-		<section id="mu-clients">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-clients-area">
-
-							<div class="mu-clients-header">
-								<h2 class="mu-heading-title">OUR <span>CLIENTS</span></h2>
-								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							</div>
-
-							<!-- Start Clients Content -->
-							<div class="mu-clients-content">
-								<div class="row">
-
-									<!-- Client Single Content -->
-									<div class="col-sm-6 col-md-2">
-										<div class="mu-clients-content-single">
-											<img src="assets/images/client-logo-1.png" alt="brand image">
-										</div>
-									</div>
-									<!-- / Client Single Content -->
-
-									<!-- Client Single Content -->
-									<div class="col-sm-6 col-md-2">
-										<div class="mu-clients-content-single">
-											<img src="assets/images/client-logo-2.png" alt="brand image">
-										</div>
-									</div>
-									<!-- / Client Single Content -->
-
-									<!-- Client Single Content -->
-									<div class="col-sm-6 col-md-2">
-										<div class="mu-clients-content-single">
-											<img src="assets/images/client-logo-3.png" alt="brand image">
-										</div>
-									</div>
-									<!-- / Client Single Content -->
-
-									<!-- Client Single Content -->
-									<div class="col-sm-6 col-md-2">
-										<div class="mu-clients-content-single">
-											<img src="assets/images/client-logo-5.png" alt="brand image">
-										</div>
-									</div>
-									<!-- / Client Single Content -->
-
-									<!-- Client Single Content -->
-									<div class="col-sm-6 col-md-2">
-										<div class="mu-clients-content-single">
-											<img src="assets/images/client-logo-4.png" alt="brand image">
-										</div>
-									</div>
-									<!-- / Client Single Content -->
-
-									<!-- Client Single Content -->
-									<div class="col-sm-6 col-md-2">
-										<div class="mu-clients-content-single">
-											<img src="assets/images/client-logo-6.png" alt="brand image">
-										</div>
-									</div>
-									<!-- / Client Single Content -->
-
-								</div>
-							</div>
-							<!-- End Clients Content -->
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Clients -->
-
-		<!-- Start Contact -->
-		<section id="mu-contact">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-contact-area">
-
-							<div class="mu-contact-header">
-								<h2 class="mu-heading-title">CONTACT <span>US</span></h2>
-								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							</div>
-
-							<!-- Start Contact Content -->
-							<div class="mu-contact-content">
-								<div class="row">
-
-									<div class="col-md-8">
-										<div class="mu-contact-left">
-										<div id="form-messages"></div>
-											<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
-												<div class="form-group">                
-													<input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
-												</div>
-												<div class="form-group">                
-													<input type="email" class="form-control" placeholder="Enter Email" id="email" name="email" required>
-												</div>              
-												<div class="form-group">
-													<textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
-												</div>
-												<button type="submit" class="mu-send-msg-btn"><span>SUBMIT</span></button>
-								            </form>
-										</div>
-									</div>	
-
-									<div class="col-md-4">
-										<div class="mu-contact-right">
-											<h4>Biziness</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-											<address>
-												<p><i class="icon-location-pin"></i>Dooley Branch Rd Millen, GA 30442, USA</p>
-												<p><i class="icon-envelope"></i>contact@domain.com</p>
-												<p><i class="icon-phone"></i>+90 987 678 9834</p>
-											</address>
-											<div class="mu-social-media">
-												<a href="#"><i class="icon-social-facebook"></i></a>
-												<a href="#"><i class="icon-social-twitter"></i></a>
-												<a href="#"><i class="icon-social-google"></i></a>
-												<a href="#"><i class="icon-social-linkedin"></i></a>
-												<a href="#"><i class="icon-social-youtube"></i></a>
-											</div>
-										</div>
-									</div>	
-
-								</div>
-							</div>
-							<!-- End Contact Content -->
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Contact -->
 
 		<!-- Start Google Map -->
 		<section id="mu-google-map">
