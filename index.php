@@ -92,7 +92,7 @@ $action = "view_friend";        // default action
 		      </button>
 
 		      <!-- Text Logo -->
-		      <a class="navbar-brand" href="index.php">Wafoodwa</a>
+		      <img src="https://i.imgur.com/XhBi4Kr.png" alt="wafoodwa icon" width="400">
 		      <!-- Image Logo -->
 		      <!-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a> -->
 
@@ -143,7 +143,7 @@ $action = "view_friend";        // default action
 						<img src="assets/images/restaurants.jpg">
 						<div class="mu-featured-slider-content">
 							<h1>WELCOME TO WAFOODWA</h1>
-							<p>Your perfect retaurant review application.</p>
+							<p>Your perfect restaurant review application.</p>
 							<a href="#mu-portfolio" class="mu-primary-btn">Explore the Restaurants</a>
 						</div>
 					</div>
