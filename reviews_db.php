@@ -27,7 +27,7 @@
    $statement2->closeCursor();
    $statement3->closeCursor();
 
-
-   header("Location: ./index.php?review=success");
+   $encode = urlencode($restaurant_name);
+   header("Location: ./reviews.php?" . $encode);
 
 ?>
