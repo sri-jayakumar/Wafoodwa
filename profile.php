@@ -87,11 +87,14 @@ require('res_db.php');           // include code to access and process a friend 
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav mu-menu navbar-right">
-              <li><a href="index.php">HOME</a></li>
-              <li><a href="#mu-contact">CONTACT</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
+		      	<ul class="nav navbar-nav mu-menu navbar-right">
+			        <li><a href="index.php">HOME</a></li>
+		            <li><a href="profile.php">PROFILE</a></li>
+					<li><a href="index.php#mu-portfolio">RESTAURANTS</a></li>
+		            <li><a href="index.php#mu-team">OUR TEAM</a></li>
+					<li><a href="export.php">EXPORT CSV</a></li>
+		      	</ul>
+		    </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     </div>
