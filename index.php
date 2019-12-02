@@ -78,10 +78,10 @@ $action = "view_friend";        // default action
   </head>
   <body>
 	  <!-- Start Header -->
-	<header id="mu-header" class="" role="banner">
+	<header id="mu-header" class="" role="banner" >
 		<div class="container">
 			<nav class="navbar navbar-default navbar-fixed-top mu-fixed-nav" style="background-color:black;">
-		  <div class="container-fluid">
+		  <div class="container-fluid navbar1">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -92,8 +92,7 @@ $action = "view_friend";        // default action
 		      </button>
 
 		      <!-- Text Logo -->
-		      <a class="navbar-brand" href="#">Wafoodwa</a>
-
+		      <a class="navbar-brand" href="index.php">Wafoodwa</a>
 		      <!-- Image Logo -->
 		      <!-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a> -->
 
@@ -277,7 +276,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/sri.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -296,7 +295,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/jane.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -315,7 +314,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/helen.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -334,7 +333,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/nik.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -353,7 +352,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/am.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -372,7 +371,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/selinie.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
