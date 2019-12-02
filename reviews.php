@@ -82,12 +82,11 @@ h4{
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
-			        <li><a href="#">HOME</a></li>
+			        <li><a href="index.php">HOME</a></li>
 		            <li><a href="profile.php">PROFILE</a></li>
-		            <li><a href="login.php">LOGIN</a></li>
-		            <li><a href="signup.php">SIGNUP</a></li>
 					<li><a href="#mu-portfolio">RESTAURANTS</a></li>
 		            <li><a href="#mu-team">OUR TEAM</a></li>
+					<li><a href="export.php">EXPORT CSV</a></li>
 		      	</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -98,23 +97,6 @@ h4{
 	<h5>Restaurant</h5>
 	<h5>Restaurant</h5>
 	&nbsp;
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">WAFOODWA</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="profile.php">Profile</a>
-      </li>
-    </ul>
-  </div>
-</nav>
 	<div class="container">
 		<b><font size="7"
 		<?php foreach ($onerest as $restaurant): ?>
@@ -124,10 +106,6 @@ h4{
 
 		<?php foreach ($onerest as $restaurant): ?>
 			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?> </p>
-			<img class="img-responsive" src=<?php 
-				if(empty($thumbnail)){
-					echo "assets/images/portfolio/img-1.jpeg";
-			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?></p>
 			<img class="img-responsive" src=<?php
 				if (empty($thumbnail)) {
 					echo "assets/images/portfolio/imag-1.jpeg";
@@ -172,8 +150,6 @@ h4{
 	<div class="container">
 
 		<h1><font size="5">Reviews</font></h1>
-		<h4> Review</h4>
-
 		<form action = "reviews_db.php" method="POST"> 
 			<div class="form-group">
 				<p><label for="rating">Rating</label> 

@@ -55,7 +55,7 @@ form, .content {
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #263882;
+  background: #fda2b9;
   border: none;
   border-radius: 5px;
 }
@@ -78,6 +78,7 @@ form, .content {
 </style>
 
 <title>Registration system PHP and MySQL</title>
+<link rel="shortcut icon" type="image/icon" href="https://i.imgur.com/x4RA1ZT.png"/>
 </head>
 <body>
   <div class="header">
@@ -102,6 +103,7 @@ form, .content {
   	  <label>Confirm password</label>
   	  <input type="password" name="password_2">
   	</div>
+    &nbsp;
   	<div class="input-group">
   	  <button type="submit" class="btn" name="reg_user">Register</button>
   	</div>

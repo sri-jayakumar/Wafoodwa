@@ -13,7 +13,6 @@ $action = "view_friend";        // default action
 ?>
 <?php 
   session_start(); 
-
   if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
@@ -57,21 +56,6 @@ $action = "view_friend";        // default action
  
   </head>
   <title>Reviews</title>
-	<title>User Profile</title>
-
-  <style> 
-
-  .content{
-    margin-top: 8%;
-  }
-
-
-
-  img{
-    width: 20%;
-  }
-
-</style>
 </head>
 <body>
   <header id="mu-header" class="" role="banner" >
@@ -98,22 +82,13 @@ $action = "view_friend";        // default action
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav mu-menu navbar-right">
-              <li><a href="#">HOME</a></li>
-                <li><a href="profile.php">PROFILE</a></li>
-                <li><a href="login.php">LOGIN</a></li>
-                <li><a href="signup.php">SIGNUP</a></li>
-          <li><a href="#mu-portfolio">RESTAURANTS</a></li>
-                <li><a href="#mu-team">OUR TEAM</a></li>
+              <li><a href="index.php">HOME</a></li>
+              <li><a href="profile.php">PROFILE</a></li>
+              <li><a href="#mu-portfolio">RESTAURANTS</a></li>
+              <li><a href="#mu-team">OUR TEAM</a></li>
+              <li><a href="export.php">EXPORT CSV</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
-		      	<ul class="nav navbar-nav mu-menu navbar-right">
-			        <li><a href="index.php">HOME</a></li>
-		            <li><a href="profile.php">PROFILE</a></li>
-					<li><a href="index.php#mu-portfolio">RESTAURANTS</a></li>
-		            <li><a href="index.php#mu-team">OUR TEAM</a></li>
-					<li><a href="export.php">EXPORT CSV</a></li>
-		      	</ul>
-		    </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     </div>
@@ -126,10 +101,6 @@ $action = "view_friend";        // default action
     <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
     <!-- notification message -->
     <?php if (isset($_SESSION['success'])) : ?>
-	<div class="content container">
-    <img src="assets/images/profile_pic.png">
-  	<!-- notification message -->
-  	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
         <h3>
           <?php 
