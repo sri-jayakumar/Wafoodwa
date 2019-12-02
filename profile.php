@@ -116,6 +116,14 @@ $action = "view_friend";        // default action
       <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong>! </p>
       <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
+
+    <h1>Following:</h1>
+    <?php foreach($_SESSION['followed'] as $restaurant):?>
+      <a href=<?php echo "reviews.php?" . urlencode($restaurant['restaurant'])?> title=<?php echo $restaurant['restaurant'];?>>
+        <?php echo $restaurant['restaurant']?>
+      </a>
+      <br>
+    <?php endforeach;?>
 </div>
   <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
