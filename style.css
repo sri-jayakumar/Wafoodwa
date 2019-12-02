@@ -1480,13 +1480,14 @@ button:focus {
 	
 }
 
+#header1{
+	background-color:black;
+}
+
 
 
 @media (max-width: 320px){
-	
-	
-	
-	
-	
 }
+
+
 
