@@ -11,11 +11,11 @@ require('connect_db_pdo.php');      // include code to connect to a database
 require('res_db.php');           // include code to access and process a friend table 
 ?>
 <?php
+	session_start();
 	$name = $_SERVER['QUERY_STRING'];
 	$onerest = getSpecificRestaurant($name);
-?>
-<?php 
-  session_start(); 
+	$rest_name = "";
+	$is_following = FALSE;
 ?>
 
 <!DOCTYPE html>
@@ -50,12 +50,33 @@ h4{
 </nav>
 
 	<div class="container">
-		<b><font size="7"
+		<b><font size="7">
 		<?php foreach ($onerest as $restaurant): ?>
-			<p><?php echo $restaurant['restaurants_name']; ?> </p>
+			<p>
+				<?php 
+					$rest_name = $restaurant['restaurants_name'];
+					if(count($_SESSION['followed']) > 0){
+						foreach($_SESSION['followed'] as $rest){
+							if($rest['restaurant'] == $rest_name){
+								$is_following = TRUE;
+							}
+						}
+					}	
+					echo $rest_name;
+				?> 
+			</p>
 		<?php endforeach; ?>
 		</font></b>
-
+		<?php
+			if(isset($_POST['follow'])){
+				followRestaurant(!$is_following, $_SESSION['username'], $rest_name);
+				$_SESSION['followed'] = getFollowedRestaurants($_SESSION['username']);
+				$is_following = !$is_following;
+			}
+		?>
+		<form method="post">
+			<input type="submit" name="follow" value=<?php echo ($is_following ? "Unfollow" : "Follow"); ?> />
+		</form>
 		<?php foreach ($onerest as $restaurant): ?>
 			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?></p>
 			<img class="img-responsive" src=<?php

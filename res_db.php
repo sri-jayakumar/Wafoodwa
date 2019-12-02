@@ -45,6 +45,38 @@ function getAllReviews($restaurant)
    return $results;
 }
 
+function getFollowedRestaurants($username)
+{
+   global $db;
+   $query = "SELECT * FROM follow WHERE follower = '$username'";
+   $statement = $db->prepare($query); 
+   $statement->execute();
+
+   // fetchAll() returns an array for all of the rows in the result set
+   $results = $statement->fetchAll();
+
+   // closes the cursor and frees the connection to the server so other SQL statements may be issued 
+   $statement->closecursor();
+
+   return $results;
+}
+
+function followRestaurant($follow, $username, $restaurant)
+{
+   global $db;
+   if($follow){
+      $query = "INSERT INTO follow(follower, restaurant) VALUES ('$username', '$restaurant')";
+   } else {
+      $query = "DELETE FROM follow WHERE follow.follower = '$username' AND follow.restaurant = '$restaurant'";
+   }
+   
+   $statement = $db->prepare($query); 
+   $statement->execute();
+
+   // closes the cursor and frees the connection to the server so other SQL statements may be issued 
+   $statement->closecursor();
+}
+
 function getAllRestaurants()
 {
    global $db;
