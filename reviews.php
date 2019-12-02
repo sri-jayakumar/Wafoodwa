@@ -9,11 +9,13 @@
 //            the rest of the script won't run
 require('connect_db_pdo.php');      // include code to connect to a database      
 require('res_db.php');           // include code to access and process a friend table 
-$action = "view_friend";        // default action
 ?>
 <?php
 	$name = $_SERVER['QUERY_STRING'];
 	$onerest = getSpecificRestaurant($name);
+?>
+<?php 
+  session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,6 @@ $action = "view_friend";        // default action
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />  
 	<title>Reviews</title>
-
 <style> 
 h4{
 	margin-top: 4%;
@@ -119,7 +120,7 @@ h4{
 			$reviews = getAllReviews($onerest[0]['restaurants_name']);
 		?>
 		<?php foreach ($reviews as $review): ?>
-			<p><strong><?php echo $review['student_email']; ?> </strong></p>
+			<p><strong><?php echo $review['username']; ?> </strong></p>
 			<p><strong> Review: </strong><?php echo $review['review_text']; ?> </p>
 			<p><strong> Rating: </strong><?php echo $review['rating']; ?> out of 5</p>
 			<hr>
