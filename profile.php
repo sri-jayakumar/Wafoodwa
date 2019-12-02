@@ -99,18 +99,17 @@ require('res_db.php');           // include code to access and process a friend 
     </div>
   </header>
 	<div class="content container">
-    <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
-  	<!-- notification message -->
-  	<?php if (isset($_SESSION['success'])) : ?>
+      <?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
-      	<h3>
+        <p>
           <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
+            echo $_SESSION['success']; 
+            unset($_SESSION['success']);
           ?>
-      	</h3>
+        </p>
       </div>
-  	<?php endif ?>
+    <?php endif ?>
+    <img src="/assets/images/profile.png">
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
