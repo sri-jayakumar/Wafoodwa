@@ -143,7 +143,8 @@ $action = "view_friend";        // default action
 						<img src="assets/images/restaurants.jpg">
 						<div class="mu-featured-slider-content">
 							<h1>WELCOME TO WAFOODWA</h1>
-							<p>Your perfect restaurant review application.</p>
+							<p>Your perfect restaurant review application.
+							Hello</p>
 							<a href="#mu-portfolio" class="mu-primary-btn">Explore the Restaurants</a>
 						</div>
 					</div>
