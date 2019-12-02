@@ -276,7 +276,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/sri.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -295,7 +295,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/jane.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -314,7 +314,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/helen.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
@@ -371,7 +371,7 @@ $action = "view_friend";        // default action
 									<div class="col-sm-6 col-md-4">
 										<div class="mu-team-content-single">
 											<div class="mu-team-profile">
-												<img src="assets/images/team-member-1.jpg" alt="team member">
+												<img src="assets/images/selinie.jpg" alt="team member">
 												<div class="mu-team-social-info">
 													<a href="#"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
