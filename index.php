@@ -106,6 +106,7 @@ $action = "view_friend";        // default action
 		            <li><a href="profile.php">PROFILE</a></li>
 					<li><a href="#mu-portfolio">RESTAURANTS</a></li>
 		            <li><a href="#mu-team">OUR TEAM</a></li>
+					<li><a href="export.php">EXPORT CSV</a></li>
 		      	</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
