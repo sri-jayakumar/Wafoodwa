@@ -16,12 +16,17 @@ $action = "view_friend";        // default action
 	$onerest = getSpecificRestaurant($name);
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />  
 	<title>Reviews</title>
+
+<style> 
+h4{
+	margin-top: 4%;
+}
+</style>
 </head>
 <body>
 	<div class="container">
@@ -74,7 +79,8 @@ $action = "view_friend";        // default action
 	</div>
 
 	<div class="container">
-		<h1> Restaurant Name </h1>
+		<h4> Review</h4>
+
 		<form action = "reviews_db.php" method="POST"> 
 			<div class="form-group">
 				<p><label for="rating">Rating</label> 
@@ -89,11 +95,16 @@ $action = "view_friend";        // default action
 			<button type="submit" class="btn btn-primary my-1">Submit</button>
 			<input type="hidden" name="restaurant_name" value=<?php echo $name?> id="restaurant_name">
 		</form>
+		<hr>
 		<?php     
-			echo $onerest[0]['restaurants_name'];
 			$reviews = getAllReviews($onerest[0]['restaurants_name']);
-			echo $reviews[1];
 		?>
+		<?php foreach ($reviews as $review): ?>
+			<p><strong><?php echo $review['student_email']; ?> </strong></p>
+			<p><strong> Review: </strong><?php echo $review['review_text']; ?> </p>
+			<p><strong> Rating: </strong><?php echo $review['rating']; ?> out of 5</p>
+			<hr>
+		<?php endforeach; ?>
 		
 	</div>
 </body>

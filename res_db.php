@@ -32,7 +32,7 @@ function getSpecificRestaurant($rest)
 function getAllReviews($restaurant)
 {
    global $db;
-   $query = "SELECT * FROM review WHERE restaurant_name = $restaurant";
+   $query = "SELECT * FROM review WHERE restaurant_name = '$restaurant'";
    $statement = $db->prepare($query); 
    $statement->execute();
 
