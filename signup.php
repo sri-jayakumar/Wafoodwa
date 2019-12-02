@@ -19,7 +19,7 @@ body {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #5F9EA0;
+  background: #263882;
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
@@ -54,7 +54,7 @@ form, .content {
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #5F9EA0;
+  background: #263882;
   border: none;
   border-radius: 5px;
 }

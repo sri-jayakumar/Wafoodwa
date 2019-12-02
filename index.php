@@ -78,10 +78,10 @@ $action = "view_friend";        // default action
   </head>
   <body>
 	  <!-- Start Header -->
-	<header id="mu-header" class="" role="banner">
+	<header id="mu-header" class="" role="banner" >
 		<div class="container">
 			<nav class="navbar navbar-default navbar-fixed-top mu-fixed-nav" style="background-color:black;">
-		  <div class="container-fluid">
+		  <div class="container-fluid navbar1">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -92,8 +92,7 @@ $action = "view_friend";        // default action
 		      </button>
 
 		      <!-- Text Logo -->
-		      <a class="navbar-brand" href="#">Wafoodwa</a>
-
+		      <a class="navbar-brand" href="index.php">Wafoodwa</a>
 		      <!-- Image Logo -->
 		      <!-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a> -->
 
