@@ -84,6 +84,7 @@ form, .content {
   </div>
 	
   <form method="post" action="register_db.php">
+    <?php include('errors.php'); ?>
     <div class="input-group">
       <label>Username</label>
       <input type="text" name="username">
