@@ -54,7 +54,7 @@ form, .content {
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #5F9EA0;
+  background: #263882;
   border: none;
   border-radius: 5px;
 }
@@ -84,6 +84,7 @@ form, .content {
   </div>
 	
   <form method="post" action="register_db.php">
+    <?php include('errors.php'); ?>
     <div class="input-group">
       <label>Username</label>
       <input type="text" name="username">

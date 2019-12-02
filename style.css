@@ -1489,5 +1489,11 @@ button:focus {
 @media (max-width: 320px){
 }
 
+.navbar1{
+	background-color: #263882;
+	margin: 0px;
+}
 
-
+.navbar-brand{
+	color: blue;
+}
