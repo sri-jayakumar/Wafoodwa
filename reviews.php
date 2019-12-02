@@ -138,6 +138,7 @@ $action = "view_friend";        // default action
 		</table>
 	<?php endforeach; ?>
 	</div>
+	&nbsp;
 
 	<div class="container">
 
