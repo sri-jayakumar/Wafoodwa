@@ -12,16 +12,15 @@ require('res_db.php');           // include code to access and process a friend 
   padding: 0px;
 }
 body {
-  font-size: 100%;
+  font-size: 120%;
   background: #F8F8FF;
-  font-family: 'Avenir Next Condensed', sans-serif;
 }
 
 .header {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #000000;
+  background: #bebebe;
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
@@ -56,7 +55,7 @@ form, .content {
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #fda2b9;
+  background: #263882;
   border: none;
   border-radius: 5px;
 }
@@ -78,7 +77,6 @@ form, .content {
 }
 
   </style>
-  <link rel="shortcut icon" type="image/icon" href="https://i.imgur.com/x4RA1ZT.png"/>
 </head>
 <body>
   <div class="header">
@@ -95,7 +93,6 @@ form, .content {
   		<label>Password</label>
   		<input type="password" name="password">
   	</div>
-    &nbsp;
   	<div class="input-group">
   		<button type="submit" class="btn" name="login_user">Login</button>
   	</div>
