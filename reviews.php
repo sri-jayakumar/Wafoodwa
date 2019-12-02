@@ -17,9 +17,6 @@ require('res_db.php');           // include code to access and process a friend 
 	$rest_name = "";
 	$is_following = FALSE;
 ?>
-<?php 
-  session_start(); 
-?>
 
 <!DOCTYPE html>
 <html>
