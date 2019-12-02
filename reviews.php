@@ -15,6 +15,7 @@ $action = "view_friend";        // default action
 	$name = $_SERVER['QUERY_STRING'];
 	$onerest = getSpecificRestaurant($name);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +49,13 @@ $action = "view_friend";        // default action
  
   </head>
 	<title>Reviews</title>
+
+<style> 
+h4{
+	margin-top: 4%;
+}
+
+</style>
 </head>
 <body>
 	<header id="mu-header" class="" role="banner" >
@@ -90,6 +98,23 @@ $action = "view_friend";        // default action
 	<h5>Restaurant</h5>
 	<h5>Restaurant</h5>
 	&nbsp;
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">WAFOODWA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile.php">Profile</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 	<div class="container">
 		<b><font size="7"
 		<?php foreach ($onerest as $restaurant): ?>
@@ -102,6 +127,10 @@ $action = "view_friend";        // default action
 			<img class="img-responsive" src=<?php 
 				if(empty($thumbnail)){
 					echo "assets/images/portfolio/img-1.jpeg";
+			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?></p>
+			<img class="img-responsive" src=<?php
+				if (empty($thumbnail)) {
+					echo "assets/images/portfolio/imag-1.jpeg";
 				} else {
 					echo $thumbnail;
 				};
@@ -143,6 +172,8 @@ $action = "view_friend";        // default action
 	<div class="container">
 
 		<h1><font size="5">Reviews</font></h1>
+		<h4> Review</h4>
+
 		<form action = "reviews_db.php" method="POST"> 
 			<div class="form-group">
 				<p><label for="rating">Rating</label> 
@@ -163,6 +194,17 @@ $action = "view_friend";        // default action
 			<input type="hidden" name="restaurant_name" value=<?php echo $name?> id="restaurant_name">
 		</form>
 		&nbsp;
+		<hr>
+		<?php     
+			$reviews = getAllReviews($onerest[0]['restaurants_name']);
+		?>
+		<?php foreach ($reviews as $review): ?>
+			<p><strong><?php echo $review['student_email']; ?> </strong></p>
+			<p><strong> Review: </strong><?php echo $review['review_text']; ?> </p>
+			<p><strong> Rating: </strong><?php echo $review['rating']; ?> out of 5</p>
+			<hr>
+		<?php endforeach; ?>
+		
 	</div>
 	<!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
