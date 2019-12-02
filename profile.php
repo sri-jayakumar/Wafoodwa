@@ -85,8 +85,8 @@ $action = "view_friend";        // default action
             <ul class="nav navbar-nav mu-menu navbar-right">
               <li><a href="index.php">HOME</a></li>
               <li><a href="profile.php">PROFILE</a></li>
-              <li><a href="index.php/#mu-portfolio">RESTAURANTS</a></li>
-              <li><a href="#mu-team">OUR TEAM</a></li>
+              <li><a href="index.php#mu-portfolio">RESTAURANTS</a></li>
+              <li><a href="index.php#mu-team">OUR TEAM</a></li>
               <li><a href="export.php">EXPORT CSV</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

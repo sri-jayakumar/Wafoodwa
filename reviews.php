@@ -1,3 +1,4 @@
+
 <?php
 // include -- include code from a specified php file into this file
 //            if the specified file is not found, include produces a warning message
@@ -23,6 +24,8 @@ $action = "view_friend";        // default action
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Line icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <!-- Bootstrap -->
@@ -33,6 +36,16 @@ $action = "view_friend";        // default action
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
     <!-- Theme color -->
     <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+    <!-- Montserrat for Title -->
+  	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
  
   </head>
 	<title>Reviews</title>
@@ -63,10 +76,10 @@ $action = "view_friend";        // default action
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
 			        <li><a href="index.php">HOME</a></li>
-		            <li><a href="profile.php">PROFILE</a></li>
-					<li><a href="index.php#mu-portfolio">RESTAURANTS</a></li>
-		            <li><a href="index.php#mu-team">OUR TEAM</a></li>
-					<li><a href="export.php">EXPORT CSV</a></li>
+              		<li><a href="profile.php">PROFILE</a></li>
+              		<li><a href="index.php#mu-portfolio">RESTAURANTS</a></li>
+              		<li><a href="index.php#mu-team">OUR TEAM</a></li>
+              		<li><a href="export.php">EXPORT CSV</a></li>
 		      	</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
