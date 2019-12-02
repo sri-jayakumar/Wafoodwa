@@ -117,6 +117,9 @@ $action = "view_friend";        // default action
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
     	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+		<?php 
+			$_SESSION['followed'] = getFollowedRestaurants($_SESSION['username']);
+		?>
     <?php endif ?>
 
 	<!-- Start Featured Slider -->
