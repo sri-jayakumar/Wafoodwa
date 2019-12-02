@@ -12,15 +12,16 @@ require('res_db.php');           // include code to access and process a friend 
   padding: 0px;
 }
 body {
-  font-size: 120%;
+  font-size: 100%;
   background: #F8F8FF;
+  font-family: 'Avenir Next Condensed', sans-serif;
 }
 
 .header {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #bebebe;
+  background: #000000;
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
@@ -55,7 +56,8 @@ form, .content {
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #263882;
+  font-family: 'Avenir Next Condensed', sans-serif;
+  background: #fda2b8;
   border: none;
   border-radius: 5px;
 }
@@ -80,25 +82,26 @@ form, .content {
 </head>
 <body>
   <div class="header">
-  	<img src="https://i.imgur.com/XhBi4Kr.png" alt="wafoodwa icon" width="400">
+    <img src="https://i.imgur.com/XhBi4Kr.png" alt="wafoodwa icon" width="400">
   </div>
-	 
+   
   <form method="post" action="register_db.php">
-  	<?php include('errors.php'); ?>
-  	<div class="input-group">
-  		<label>Username</label>
-  		<input type="text" name="username" >
-  	</div>
-  	<div class="input-group">
-  		<label>Password</label>
-  		<input type="password" name="password">
-  	</div>
-  	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">Login</button>
-  	</div>
-  	<p>
-  		Not yet a member? <a href="signup.php">Sign up</a>
-  	</p>
+    <?php include('errors.php'); ?>
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" name="username" >
+    </div>
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" name="password">
+    </div>
+    &nbsp;
+    <div class="input-group">
+      <button type="submit" class="btn" name="login_user">L O G I N</button>
+    </div>
+    <p>
+      Not yet a member? <a href="signup.php">Sign up</a>
+    </p>
   </form>
 </body>
 </html>
