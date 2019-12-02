@@ -22,9 +22,9 @@ require('res_db.php');           // include code to access and process a friend 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Biziness : Home</title>
+    <title>Wafoodwa</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="assets/imges/favicon.ico"/>
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Line icon -->
