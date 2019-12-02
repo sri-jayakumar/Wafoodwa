@@ -142,9 +142,8 @@ $action = "view_friend";        // default action
 					<div class="mu-featured-slider-single">
 						<img src="assets/images/restaurants.jpg">
 						<div class="mu-featured-slider-content">
-							<h1>WELCOME TO WAFOODWA</h1>
-							<p>Your perfect restaurant review application.
-							Hello</p>
+							<h1>Welcome to Wafoodwa</h1>
+							<p>Your perfect restaurant review application.</p>
 							<a href="#mu-portfolio" class="mu-primary-btn">Explore the Restaurants</a>
 						</div>
 					</div>
@@ -195,10 +194,7 @@ $action = "view_friend";        // default action
 
 							<div class="mu-portfolio-header">
 								<h2 class="mu-heading-title"><span>RESTAURANTS</span></h2>
-								<span class="mu-header-dot"></span>
-								<p>Restaurants in the Charlottesville area</p>
 							</div>
-
 							<!-- Start Portfolio Filter -->
 							<div class="mu-portfolio-filter-area">
 								<ul class="mu-simplefilter">

@@ -38,7 +38,6 @@ $action = "view_friend";        // default action
 					echo $thumbnail;
 				};
 			?> alt="image" style="height:280px;width:640px;">
-			<p><?php echo $restaurant['restaurants_featured_image']; ?> </p>
 		<?php endforeach; ?>
 		<h1><font size="5">Details</font></h1>
 		<?php foreach ($onerest as $restaurant): ?>
@@ -75,7 +74,6 @@ $action = "view_friend";        // default action
 	<div class="container">
 
 		<h1><font size="5">Reviews</font></h1>
-		<h1> Restaurant Name </h1>
 		<form action = "reviews_db.php" method="POST"> 
 			<div class="form-group">
 				<p><label for="rating">Rating</label> 

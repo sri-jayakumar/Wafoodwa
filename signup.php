@@ -11,15 +11,16 @@ require('res_db.php');           // include code to access and process a friend 
   padding: 0px;
 }
 body {
-  font-size: 120%;
+  font-size: 100%;
   background: #F8F8FF;
+  font-family: 'Avenir Next Condensed', sans-serif;
 }
  
 .header {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #263882;
+  background: #000000;
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
@@ -80,7 +81,7 @@ form, .content {
 </head>
 <body>
   <div class="header">
-  	<h2>Register</h2>
+  	<h2><font size="20">REGISTER</font></h2>
   </div>
 	
   <form method="post" action="register_db.php">
