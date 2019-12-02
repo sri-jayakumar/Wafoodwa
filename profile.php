@@ -88,7 +88,7 @@ require('res_db.php');           // include code to access and process a friend 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav mu-menu navbar-right">
-              <li><a href="#">HOME</a></li>
+              <li><a href="index.php">HOME</a></li>
                 <li><a href="login.php">LOGIN</a></li>
                 <li><a href="signup.php">SIGNUP</a></li>
                 <li><a href="#mu-contact">CONTACT</a></li>
@@ -99,18 +99,17 @@ require('res_db.php');           // include code to access and process a friend 
     </div>
   </header>
 	<div class="content container">
-    <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
-  	<!-- notification message -->
-  	<?php if (isset($_SESSION['success'])) : ?>
+      <?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
-      	<h3>
+        <p>
           <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
+            echo $_SESSION['success']; 
+            unset($_SESSION['success']);
           ?>
-      	</h3>
+        </p>
       </div>
-  	<?php endif ?>
+    <?php endif ?>
+    <img src="/assets/images/profile.png">
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>

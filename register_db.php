@@ -2,8 +2,7 @@
 require('connect_db_pdo.php');      // include code to connect to a database      
 require('res_db.php');   
 session_start();
-
-$errors = array(); 
+ 
 
 // connect to the database
 
@@ -62,34 +61,26 @@ if (isset($_POST['reg_user'])) {
   }
 }
 
-// // LOGIN USER
-// if (isset($_POST['login_user'])) {
-//   $username = $_POST['username'];
-//   $password = $_POST['password'];
+// LOGIN USER
+if (isset($_POST['login_user'])) {
+   $db;
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $password = mysqli_real_escape_string($db, $_POST['password']);
 
-//   if (empty($username)) {
-//     array_push($errors, "Username is required");
-//   }
-//   if (empty($password)) {
-//     array_push($errors, "Password is required");
-//   }
+  $query = "SELECT * FROM student WHERE username='$username' AND password='$password'";
+  $statement = $db->prepare($query); 
+  $statement->execute();
+  // fetchAll() returns an array for all of the rows in the result set
+  $results = $statement->fetchAll();
 
-//   if (count($errors) == 0) {
-//     $password = md5($password);
-//     $query = "SELECT * FROM student WHERE username='$username' AND password='$password'";
-//     echo mysql_error();
-//     $results = mysqli_query($db, $query);
-
-//     if (mysqli_num_rows($results) == 1) {
-//       echo "success";
-//       $_SESSION['username'] = $username;
-//       $_SESSION['success'] = "You are now logged in";
-//       header("Location: ./index.php?signup=success");
-//     }else {
-//       echo "error alert";
-//       array_push($errors, "Wrong username/password combination");
-//     }
-//   }
-// }
+  if (mysqli_num_rows($results) == 1) {
+    echo "success";
+    $_SESSION['username'] = $username;
+    $_SESSION['success'] = "You are now logged in";
+    header("Location: ./profile.php?signup=success");
+  }else {
+    echo "error alert";
+  }
+}
 
 ?>
