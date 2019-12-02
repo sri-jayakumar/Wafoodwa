@@ -29,6 +29,22 @@ function getSpecificRestaurant($rest)
    return $results;
 }
 
+function getAllReviews($restaurant)
+{
+   global $db;
+   $query = "SELECT * FROM review WHERE restaurant_name = '$restaurant'";
+   $statement = $db->prepare($query); 
+   $statement->execute();
+
+   // fetchAll() returns an array for all of the rows in the result set
+   $results = $statement->fetchAll();
+
+   // closes the cursor and frees the connection to the server so other SQL statements may be issued 
+   $statement->closecursor();
+
+   return $results;
+}
+
 function getAllRestaurants()
 {
    global $db;

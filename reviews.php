@@ -15,11 +15,18 @@ $action = "view_friend";        // default action
 	$name = $_SERVER['QUERY_STRING'];
 	$onerest = getSpecificRestaurant($name);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />  
 	<title>Reviews</title>
+
+<style> 
+h4{
+	margin-top: 4%;
+}
+</style>
 </head>
 <body>
 	<div class="container">
@@ -30,7 +37,14 @@ $action = "view_friend";        // default action
 		</font></b>
 
 		<?php foreach ($onerest as $restaurant): ?>
-			<p><?php echo $restaurant['restaurants_featured_image']; ?> </p>
+			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?></p>
+			<img class="img-responsive" src=<?php
+				if (empty($thumbnail)) {
+					echo "assets/images/portfolio/imag-1.jpeg";
+				} else {
+					echo $thumbnail;
+				};
+			?> alt="image" style="height:280px;width:640px;">
 		<?php endforeach; ?>
 		<h1><font size="5">Details</font></h1>
 		<?php foreach ($onerest as $restaurant): ?>
@@ -65,7 +79,8 @@ $action = "view_friend";        // default action
 	</div>
 
 	<div class="container">
-		<h1> Restaurant Name </h1>
+		<h4> Review</h4>
+
 		<form action = "reviews_db.php" method="POST"> 
 			<div class="form-group">
 				<p><label for="rating">Rating</label> 
@@ -80,6 +95,17 @@ $action = "view_friend";        // default action
 			<button type="submit" class="btn btn-primary my-1">Submit</button>
 			<input type="hidden" name="restaurant_name" value=<?php echo $name?> id="restaurant_name">
 		</form>
+		<hr>
+		<?php     
+			$reviews = getAllReviews($onerest[0]['restaurants_name']);
+		?>
+		<?php foreach ($reviews as $review): ?>
+			<p><strong><?php echo $review['student_email']; ?> </strong></p>
+			<p><strong> Review: </strong><?php echo $review['review_text']; ?> </p>
+			<p><strong> Rating: </strong><?php echo $review['rating']; ?> out of 5</p>
+			<hr>
+		<?php endforeach; ?>
+		
 	</div>
 </body>
 </html>

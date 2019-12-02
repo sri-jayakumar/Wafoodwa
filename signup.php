@@ -19,7 +19,7 @@ body {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #263882;
+  background: #bebebe;
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
