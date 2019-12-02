@@ -91,10 +91,12 @@ if (isset($_POST['login_user'])) {
       header("Location: ./index.php?signup=success");
     }else {
       array_push($errors, "Wrong username/password combination");
-      $_SESSION['errors'] = $errors;       
+      $_SESSION['errors'] = $errors; 
+      header("Location: ./login.php");      
     }
+  } else {
+    header("Location: ./login.php");
   }
-  header("Location: ./index.php");
 }
 
 ?>
