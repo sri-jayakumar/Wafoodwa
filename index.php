@@ -43,7 +43,7 @@ $action = "view_friend";        // default action
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Wafoodwa</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/icon" href="https://i.imgur.com/x4RA1ZT.png"/>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Line icon -->

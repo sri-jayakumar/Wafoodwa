@@ -1,6 +1,15 @@
 <?php
+// include -- include code from a specified php file into this file
+//            if the specified file is not found, include produces a warning message
+//            the rest of the script will run 
+// include('connect_db_pdo.php');
+// include('friend_db.php');
+// require -- include code from a specified php file into this file
+//            if the specified file is not found, require produces a fatal error
+//            the rest of the script won't run
 require('connect_db_pdo.php');      // include code to connect to a database      
 require('res_db.php');           // include code to access and process a friend table 
+$action = "view_friend";        // default action
 ?>
 <?php 
   session_start(); 
@@ -16,15 +25,13 @@ require('res_db.php');           // include code to access and process a friend 
   }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/icon" href="https://i.imgur.com/x4RA1ZT.png"/>
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Biziness : Home</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="assets/imges/favicon.ico"/>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Line icon -->
@@ -48,22 +55,11 @@ require('res_db.php');           // include code to access and process a friend 
     <!-- Montserrat for Title -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
  
-  <title>User Profile</title>
-
-  <style> 
-
-  .content{
-    margin-top: 8%;
-  }
-
-  img{
-    width: 20%;
-  }
-
-</style>
+  </head>
+  <title>Reviews</title>
 </head>
 <body>
-  <header id="mu-header" class="" role="banner">
+  <header id="mu-header" class="" role="banner" >
     <div class="container">
       <nav class="navbar navbar-default navbar-fixed-top mu-fixed-nav" style="background-color:black;">
       <div class="container-fluid navbar1">
@@ -77,9 +73,7 @@ require('res_db.php');           // include code to access and process a friend 
           </button>
 
           <!-- Text Logo -->
-          <img src="https://i.imgur.com/XhBi4Kr.png" alt="wafoodwa icon" width="500">
-  </div>
-
+          <img src="https://i.imgur.com/XhBi4Kr.png" alt="wafoodwa icon" width="400">
           <!-- Image Logo -->
           <!-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a> -->
 
@@ -89,16 +83,22 @@ require('res_db.php');           // include code to access and process a friend 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav mu-menu navbar-right">
-              <li><a href="index.php">HOME</a></li>
+              <li><a href="#">HOME</a></li>
+                <li><a href="profile.php">PROFILE</a></li>
                 <li><a href="login.php">LOGIN</a></li>
                 <li><a href="signup.php">SIGNUP</a></li>
-                <li><a href="#mu-contact">CONTACT</a></li>
+          <li><a href="#mu-portfolio">RESTAURANTS</a></li>
+                <li><a href="#mu-team">OUR TEAM</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     </div>
   </header>
+  <h5>Restaurant</h5>
+  <h5>Restaurant</h5>
+  <h5>Restaurant</h5>
+  &nbsp;
   <div class="content container">
     <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
     <!-- notification message -->
@@ -119,6 +119,24 @@ require('res_db.php');           // include code to access and process a friend 
       <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 </div>
-
+  <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Slick slider -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <!-- Counter js -->
+    <script type="text/javascript" src="assets/js/counter.js"></script>
+    <!-- Filterable Gallery js -->
+    <script type="text/javascript" src="assets/js/jquery.filterizr.min.js"></script>
+    <!-- Gallery Lightbox -->
+    <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Ajax contact form  -->
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    
+  
+    <!-- Custom js -->
+  <script type="text/javascript" src="assets/js/custom.js"></script>
 </body>
 </html>
