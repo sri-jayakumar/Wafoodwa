@@ -20,7 +20,7 @@ body {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #5F9EA0;
+  background: #bebebe;
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
@@ -80,7 +80,7 @@ form, .content {
 </head>
 <body>
   <div class="header">
-  	<h2>Login</h2>
+  	<img src="https://i.imgur.com/XhBi4Kr.png" alt="wafoodwa icon" width="400">
   </div>
 	 
   <form method="post" action="register_db.php">

@@ -15,6 +15,8 @@ $action = "view_friend";        // default action
 	$name = $_SERVER['QUERY_STRING'];
 	$onerest = getSpecificRestaurant($name);
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +32,14 @@ $action = "view_friend";        // default action
 		</font></b>
 
 		<?php foreach ($onerest as $restaurant): ?>
-			<p><?php echo $restaurant['restaurants_featured_image']; ?> </p>
+			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?></p>
+			<img class="img-responsive" src=<?php
+				if (empty($thumbnail)) {
+					echo "assets/images/portfolio/imag-1.jpeg";
+				} else {
+					echo $thumbnail;
+				};
+			?> alt="image" style="height:280px;width:640px;">
 		<?php endforeach; ?>
 		<h1><font size="5">Details</font></h1>
 		<?php foreach ($onerest as $restaurant): ?>
@@ -80,6 +89,12 @@ $action = "view_friend";        // default action
 			<button type="submit" class="btn btn-primary my-1">Submit</button>
 			<input type="hidden" name="restaurant_name" value=<?php echo $name?> id="restaurant_name">
 		</form>
+		<?php     
+			echo $onerest[0]['restaurants_name'];
+			$reviews = getAllReviews($onerest[0]['restaurants_name']);
+			echo $reviews[1];
+		?>
+		
 	</div>
 </body>
 </html>
