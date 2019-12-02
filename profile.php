@@ -89,9 +89,7 @@ require('res_db.php');           // include code to access and process a friend 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav mu-menu navbar-right">
               <li><a href="index.php">HOME</a></li>
-                <li><a href="login.php">LOGIN</a></li>
-                <li><a href="signup.php">SIGNUP</a></li>
-                <li><a href="#mu-contact">CONTACT</a></li>
+              <li><a href="#mu-contact">CONTACT</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
