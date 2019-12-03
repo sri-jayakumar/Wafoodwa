@@ -41,11 +41,7 @@ $action = "view_friend";        // default action
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Wafoodwa</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
-    <!-- Font Awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/icon" href="https://i.imgur.com/x4RA1ZT.png"/>
     <!-- Line icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <!-- Bootstrap -->
@@ -59,14 +55,6 @@ $action = "view_friend";        // default action
 
     <!-- Main Style -->
     <link href="style.css" rel="stylesheet">
-
-    <!-- Fonts -->
-
-    <!-- Open Sans for body font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
-    <!-- Montserrat for Title -->
-  	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
- 
  
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -92,7 +80,7 @@ $action = "view_friend";        // default action
 		      </button>
 
 		      <!-- Text Logo -->
-		      <a class="navbar-brand" href="index.php">Wafoodwa</a>
+		      <img src="https://i.imgur.com/XhBi4Kr.png" alt="wafoodwa icon" width="400">
 		      <!-- Image Logo -->
 		      <!-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a> -->
 
@@ -197,7 +185,7 @@ $action = "view_friend";        // default action
 							<div class="mu-portfolio-header">
 								<h2 class="mu-heading-title"><span>RESTAURANTS</span></h2>
 								<span class="mu-header-dot"></span>
-								<p>Restaurants in the Charlotessville area</p>
+								<p>Restaurants in the Charlottesville area</p>
 							</div>
 
 							<!-- Start Portfolio Filter -->
