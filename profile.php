@@ -120,6 +120,14 @@ $action = "view_friend";        // default action
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
       <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong>! </p>
+
+      <!-- Attempt at doing profile picture addition -->
+      <p> <form action="upload.php" method="post" enctype="multipart/form-data">
+    Add/Change Profile Picture:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit"> </form></p>
+      <!-- End of attempt -->
+      
       <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 
