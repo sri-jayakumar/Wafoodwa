@@ -375,8 +375,8 @@ button:focus {
 }
 
 .mu-featured-slider-content p {
-	padding: 0 100px;
 	margin-bottom: 20px;
+	font-size: 35px;
 }
 
 .mu-featured-slider-content .mu-primary-btn{

@@ -166,6 +166,42 @@ $action = "view_friend";        // default action
 					</div>
 					<!-- End Single slide -->
 
+					<!-- Start Single slide -->
+					<div class="mu-featured-slider-single">
+					<a href=<?php echo "reviews.php?" . urlencode($toprestaurants[0]['restaurants_name'])?> title=<?php echo $toprestaurants[0]['restaurants_name'];?>>
+						<img src= <?php echo $toprestaurants[0]['restaurants_featured_image'];?> style="width:2000px;height:850px;">
+						<div class="mu-featured-slider-content">
+						<h1><?php echo $toprestaurants[0]['restaurants_name'];?></h1>
+							<p>Globally Ranked Number #1 in Charlottesville</p>
+						</div>
+					</a>
+					</div>
+					<!-- End Single slide -->
+
+					<!-- Start Single slide -->
+					<div class="mu-featured-slider-single">
+					<a href=<?php echo "reviews.php?" . urlencode($toprestaurants[1]['restaurants_name'])?> title=<?php echo $toprestaurants[1]['restaurants_name'];?>>
+						<img src= <?php echo $toprestaurants[1]['restaurants_featured_image'];?> style="width:2000px;height:850px;">
+						<div class="mu-featured-slider-content">
+						<h1><?php echo $toprestaurants[1]['restaurants_name'];?></h1>
+							<p>Globally Ranked Number #2 in Charlottesville</p>
+						</div>
+					</a>
+					</div>
+					<!-- End Single slide -->
+
+					<!-- Start Single slide -->
+					<div class="mu-featured-slider-single">
+					<a href=<?php echo "reviews.php?" . urlencode($toprestaurants[2]['restaurants_name'])?> title=<?php echo $toprestaurants[2]['restaurants_name'];?>>
+						<img src= <?php echo $toprestaurants[2]['restaurants_featured_image'];?> style="width:2000px;height:850px;">
+						<div class="mu-featured-slider-content">
+						<h1><?php echo $toprestaurants[2]['restaurants_name'];?></h1>
+							<p>Globally Ranked Number #3 in Charlottesville</p>
+						</div>
+					</a>
+					</div>
+					<!-- End Single slide -->
+
 				</div>
 			</div>			
 		</div>
