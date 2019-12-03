@@ -304,9 +304,9 @@ $action = "view_friend";        // default action
 											<div class="mu-team-profile">
 												<img src="assets/images/sri.jpg" alt="team member">
 												<div class="mu-team-social-info">
-													<a href="#"><i class="icon-social-facebook"></i></a>
-													<a href="#"><i class="icon-social-twitter"></i></a>
-													<a href="#"><i class="icon-social-linkedin"></i></a>
+													<a href="https://github.com/sri-jayakumar"><i class="icon-social-github"></i></a>
+													<a href="https://www.instagram.com/sri_jayakumar_17/"><i class="icon-social-instagram"></i></a>
+													<a href="https://www.linkedin.com/in/sri-jayakumar-b7a357119/"><i class="icon-social-linkedin"></i></a>
 												</div>
 											</div>
 											<div class="mu-team-info">

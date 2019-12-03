@@ -55,6 +55,7 @@ if (isset($_POST['reg_user'])) {
     $statement->closeCursor();
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
+    $_SESSION['email'] = $email;
     header("Location: ./profile.php?signup=success");
     // so page successfully redirects here, but user is not saved to database
   } else {
@@ -88,6 +89,9 @@ if (isset($_POST['login_user'])) {
       echo "success";
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
+      foreach (getUserEmail($username) as $user){
+        $_SESSION['email'] = $user['email'];
+      } 
       header("Location: ./index.php?signup=success");
     }else {
       array_push($errors, "Wrong username/password combination");
