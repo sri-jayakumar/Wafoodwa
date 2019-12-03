@@ -399,9 +399,9 @@ $action = "view_friend";        // default action
 											<div class="mu-team-profile">
 												<img src="assets/images/selinie.jpg" alt="team member">
 												<div class="mu-team-social-info">
-													<a href="#"><i class="icon-social-facebook"></i></a>
+													<a href="https://www.facebook.com/selinie777"><i class="icon-social-facebook"></i></a>
 													<a href="#"><i class="icon-social-twitter"></i></a>
-													<a href="#"><i class="icon-social-linkedin"></i></a>
+													<a href="https://www.linkedin.com/in/jun-yi-selinie-wang-063487187/"><i class="icon-social-linkedin"></i></a>
 												</div>
 											</div>
 											<div class="mu-team-info">
@@ -437,7 +437,7 @@ $action = "view_friend";        // default action
 	<footer id="mu-footer" role="contentinfo">
 			<div class="container">
 				<div class="mu-footer-area">
-					<p>&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+					<p>&copy; Copyright <a rel="nofollow"> All right reserved.</p>
 				</div>
 			</div>
 

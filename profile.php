@@ -123,6 +123,7 @@ $action = "view_friend";        // default action
 
       <!-- Attempt at doing profile picture addition -->
       <p> <form action="upload.php" method="post" enctype="multipart/form-data">
+        
     Add/Change Profile Picture:
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit"> </form></p>
