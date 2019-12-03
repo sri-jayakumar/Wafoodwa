@@ -130,7 +130,7 @@ $action = "view_friend";        // default action
 
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
-						<img src="assets/images/restaurants.jpg">
+						<img src="assets/images/restaurants.jpg" height="600">
 						<div class="mu-featured-slider-content">
 							<h1>Welcome to Wafoodwa</h1>
 							<p>Your perfect retaurant review application designed for UVA students about the best local Charlottesville restaurants.</p>
@@ -141,7 +141,7 @@ $action = "view_friend";        // default action
 
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
-						<img src="assets/images/basil.jpg">
+						<img src="assets/images/basil.jpg" height="600">
 						<div class="mu-featured-slider-content">
 							<h1>Basil Mediterranean Bistro</h1>
 							<p>
@@ -155,7 +155,7 @@ $action = "view_friend";        // default action
 
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
-						<img src="assets/images/bodos.jpg">
+						<img src="assets/images/bodos.jpg" height="600">
 						<div class="mu-featured-slider-content">
 							<h1>Bodo's Bagels Bakery</h1>
 							<p>
@@ -169,7 +169,7 @@ $action = "view_friend";        // default action
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
 					<a href=<?php echo "reviews.php?" . urlencode($toprestaurants[0]['restaurants_name'])?> title=<?php echo $toprestaurants[0]['restaurants_name'];?>>
-						<img src= <?php echo $toprestaurants[0]['restaurants_featured_image'];?> style="width:2000px;height:850px;">
+						<img src= <?php echo $toprestaurants[0]['restaurants_featured_image'];?> height="600" width="2100">
 						<div class="mu-featured-slider-content">
 						<h1><?php echo $toprestaurants[0]['restaurants_name'];?></h1>
 							<p>Globally Ranked Number #1 in Charlottesville</p>
@@ -181,7 +181,7 @@ $action = "view_friend";        // default action
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
 					<a href=<?php echo "reviews.php?" . urlencode($toprestaurants[1]['restaurants_name'])?> title=<?php echo $toprestaurants[1]['restaurants_name'];?>>
-						<img src= <?php echo $toprestaurants[1]['restaurants_featured_image'];?> style="width:2000px;height:850px;">
+						<img src= <?php echo $toprestaurants[1]['restaurants_featured_image'];?> height="600" width="2100">
 						<div class="mu-featured-slider-content">
 						<h1><?php echo $toprestaurants[1]['restaurants_name'];?></h1>
 							<p>Globally Ranked Number #2 in Charlottesville</p>
@@ -193,7 +193,7 @@ $action = "view_friend";        // default action
 					<!-- Start Single slide -->
 					<div class="mu-featured-slider-single">
 					<a href=<?php echo "reviews.php?" . urlencode($toprestaurants[2]['restaurants_name'])?> title=<?php echo $toprestaurants[2]['restaurants_name'];?>>
-						<img src= <?php echo $toprestaurants[2]['restaurants_featured_image'];?> style="width:2000px;height:850px;">
+						<img src= <?php echo $toprestaurants[2]['restaurants_featured_image'];?> height="600" width="2100">
 						<div class="mu-featured-slider-content">
 						<h1><?php echo $toprestaurants[2]['restaurants_name'];?></h1>
 							<p>Globally Ranked Number #3 in Charlottesville</p>
