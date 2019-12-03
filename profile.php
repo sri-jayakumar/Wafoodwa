@@ -32,6 +32,12 @@ $action = "view_friend";        // default action
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Wafoodwa</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Line icon -->
@@ -144,5 +150,6 @@ $action = "view_friend";        // default action
   
     <!-- Custom js -->
   <script type="text/javascript" src="assets/js/custom.js"></script>
+
 </body>
 </html>
