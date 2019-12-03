@@ -51,7 +51,7 @@ $action = "view_friend";        // default action
     <!-- Gallery Lightbox -->
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
     <!-- Theme color -->
-    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+    <link id="switcher" href="assets/css/theme-color/custom-theme.css" rel="stylesheet">
 
     <!-- Main Style -->
     <link href="style.css" rel="stylesheet">
@@ -90,7 +90,7 @@ $action = "view_friend";        // default action
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav mu-menu navbar-right">
-			        <li><a href="#">HOME</a></li>
+			        <li><a href="index.php">HOME</a></li>
 		            <li><a href="profile.php">PROFILE</a></li>
 					<li><a href="#mu-portfolio">RESTAURANTS</a></li>
 		            <li><a href="#mu-team">OUR TEAM</a></li>
@@ -132,8 +132,8 @@ $action = "view_friend";        // default action
 					<div class="mu-featured-slider-single">
 						<img src="assets/images/restaurants.jpg">
 						<div class="mu-featured-slider-content">
-							<h1>WELCOME TO WAFOODWA</h1>
-							<p>Your perfect retaurant review application.</p>
+							<h1>Welcome to Wafoodwa</h1>
+							<p>Your perfect retaurant review application designed for UVA students about the best local Charlottesville restaurants.</p>
 							<a href="#mu-portfolio" class="mu-primary-btn">Explore the Restaurants</a>
 						</div>
 					</div>

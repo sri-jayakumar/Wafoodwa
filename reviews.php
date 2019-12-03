@@ -121,6 +121,7 @@ $action = "view_friend";        // default action
 				};
 			?> alt="image" style="height:280px;width:640px;">
 		<?php endforeach; ?>
+		&nbsp;
 		<?php
 			if(isset($_POST['follow'])){
 				followRestaurant(!$is_following, $_SESSION['username'], $rest_name);
