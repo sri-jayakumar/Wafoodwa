@@ -739,7 +739,7 @@ button:focus {
 
 .mu-simplefilter li {
 	border: 10px;
-	color: #333;
+	color: #000000;
 	cursor: pointer;
 	display: inline-block;
 	text-transform: uppercase;
@@ -752,8 +752,8 @@ button:focus {
 
 .mu-simplefilter li:hover,
 .mu-simplefilter li.active {
-    color: #fff;
-    border-color: #fff;
+    color: #000000;
+    border-color: #000000;
 }
 
 
