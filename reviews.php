@@ -160,6 +160,24 @@ $action = "view_friend";        // default action
     				<?php echo $restaurant['restaurants_price_range'] . " out of 5"; ?>
     			</td>
   			</tr>
+  			<tr>
+    			<b><td align="left">Aggregate Review</td></b>
+    			<td align="left">
+    				<?php echo $restaurant['restaurants_user_rating_aggregate_rating'] . " out of 5"; ?>
+    			</td>
+  			</tr>
+  			<tr>
+    			<b><td align="left">Average Price for Two</td></b>
+    			<td align="left">
+    				<?php echo $restaurant['restaurants_average_cost_for_two']; ?>
+    			</td>
+  			</tr>
+  			<tr>
+    			<b><td align="left">Menu URL</td></b>
+    			<td align="left">
+    				<li><a href="<?php echo $restaurant['restaurants_menu_url']; ?>">Menu</a></li>
+    			</td>
+  			</tr>
 		</table>
 	<?php endforeach; ?>
 	</div>
