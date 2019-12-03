@@ -127,7 +127,7 @@ $action = "view_friend";        // default action
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit"> </form></p>
       <!-- End of attempt -->
-      
+    &nbsp;
       <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 
