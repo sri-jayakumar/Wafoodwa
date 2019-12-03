@@ -31,8 +31,9 @@ function getSpecificRestaurant($rest)
 
 function getAllReviews($restaurant)
 {
+   $escaped_restaurant = addslashes($restaurant);
    global $db;
-   $query = "SELECT * FROM review WHERE restaurant_name = '$restaurant'";
+   $query = "SELECT * FROM review WHERE restaurant_name = '$escaped_restaurant'";
    $statement = $db->prepare($query); 
    $statement->execute();
 
@@ -63,11 +64,12 @@ function getFollowedRestaurants($username)
 
 function followRestaurant($follow, $username, $restaurant)
 {
+   $escaped_restaurant = addslashes($restaurant);
    global $db;
    if($follow){
-      $query = "INSERT INTO follow(follower, restaurant) VALUES ('$username', '$restaurant')";
+      $query = "INSERT INTO follow(follower, restaurant) VALUES ('$username', '$escaped_restaurant')";
    } else {
-      $query = "DELETE FROM follow WHERE follow.follower = '$username' AND follow.restaurant = '$restaurant'";
+      $query = "DELETE FROM follow WHERE follow.follower = '$username' AND follow.restaurant = '$escaped_restaurant'";
    }
    
    $statement = $db->prepare($query); 
@@ -75,6 +77,21 @@ function followRestaurant($follow, $username, $restaurant)
 
    // closes the cursor and frees the connection to the server so other SQL statements may be issued 
    $statement->closecursor();
+}
+
+function getUserEmail($username) {
+   global $db;
+   $query = "SELECT email FROM student WHERE username = '$username'";
+   $statement = $db->prepare($query); 
+   $statement->execute();
+
+   // fetchAll() returns an array for all of the rows in the result set
+   $results = $statement->fetchAll();
+
+   // closes the cursor and frees the connection to the server so other SQL statements may be issued 
+   $statement->closecursor();
+
+   return $results;
 }
 
 function getAllRestaurants()

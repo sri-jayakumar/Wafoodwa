@@ -193,7 +193,7 @@ $action = "view_friend";        // default action
 		?>
 		<?php foreach ($reviews as $review): ?>
 			<p><strong><?php echo $review['username']; ?> </strong></p>
-			<p><strong> Review: </strong><?php echo $review['review_text']; ?> </p>
+			<p><strong> Review: </strong><?php echo addslashes($review['review_text']); ?> </p>
 			<p><strong> Rating: </strong><?php echo $review['rating']; ?> out of 5</p>
 			<hr>
 		<?php endforeach; ?>
