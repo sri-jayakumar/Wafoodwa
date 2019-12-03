@@ -94,16 +94,6 @@ $action = "view_friend";        // default action
 	<h5>Restaurant</h5>
 	&nbsp;
 	<div class="container">
-		<?php
-			if(isset($_POST['follow'])){
-				followRestaurant(!$is_following, $_SESSION['username'], $rest_name);
-				$_SESSION['followed'] = getFollowedRestaurants($_SESSION['username']);
-				$is_following = !$is_following;
-			}
-		?>
-		<form method="post">
-			<input type="submit" name="follow" value=<?php echo ($is_following ? "Unfollow" : "Follow"); ?> />
-		</form>
 		<b><font size="7">
 		<?php foreach ($onerest as $restaurant): ?>
 			<p>
@@ -131,6 +121,16 @@ $action = "view_friend";        // default action
 				};
 			?> alt="image" style="height:280px;width:640px;">
 		<?php endforeach; ?>
+		<?php
+			if(isset($_POST['follow'])){
+				followRestaurant(!$is_following, $_SESSION['username'], $rest_name);
+				$_SESSION['followed'] = getFollowedRestaurants($_SESSION['username']);
+				$is_following = !$is_following;
+			}
+		?>
+		<form method="post">
+			<input type="submit" name="follow" value=<?php echo ($is_following ? "Unfollow" : "Follow"); ?> />
+		</form>
 		<h1><font size="5">Details</font></h1>
 		<?php foreach ($onerest as $restaurant): ?>
 
