@@ -370,13 +370,11 @@ button:focus {
 }
 
 .mu-featured-slider-content h1 {
-	color: #fff;
 	font-size: 50px;
 	margin-bottom: 20px;
 }
 
 .mu-featured-slider-content p {
-	color: #fff;
 	padding: 0 100px;
 	margin-bottom: 20px;
 }
@@ -716,7 +714,7 @@ button:focus {
 	top: 16px;
 	right: 16px;
 	bottom: 16px;
-	color: #fff;
+	color: #000000;
 	padding-top: 30%;
 	text-align: center;
 	-webkit-transform: scale(0);
