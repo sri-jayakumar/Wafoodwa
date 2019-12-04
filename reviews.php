@@ -169,16 +169,26 @@ $action = "view_friend";        // default action
   			<tr>
     			<b><td align="left">Average Price for Two</td></b>
     			<td align="left">
-    				<?php echo $restaurant['restaurants_average_cost_for_two']; ?>
+    				<?php echo '$' . $restaurant['restaurants_average_cost_for_two']; ?>
     			</td>
   			</tr>
   			<tr>
     			<b><td align="left">Menu URL</td></b>
     			<td align="left">
-    				<li><a href="<?php echo $restaurant['restaurants_menu_url']; ?>">Menu</a></li>
+    				<a href="<?php echo $restaurant['restaurants_menu_url']; ?>" target="_blank">Menu</a>
     			</td>
   			</tr>
 		</table>
+		<iframe 
+				width="300" 
+				height="170" 
+				frameborder="0" 
+				scrolling="no" 
+				marginheight="0" 
+				marginwidth="0" 
+				src=<?php echo "https://maps.google.com/maps?q=".urlencode($restaurant['restaurants_location_address'])."&amp;output=embed"?>
+				>
+			</iframe>
 	<?php endforeach; ?>
 	</div>
 	&nbsp;
