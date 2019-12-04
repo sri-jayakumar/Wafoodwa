@@ -361,9 +361,9 @@ $action = "view_friend";        // default action
 											<div class="mu-team-profile">
 												<img src="assets/images/nik.jpg" alt="team member">
 												<div class="mu-team-social-info">
-													<a href="#"><i class="icon-social-facebook"></i></a>
-													<a href="#"><i class="icon-social-twitter"></i></a>
-													<a href="#"><i class="icon-social-linkedin"></i></a>
+													<a href="https://www.facebook.com/nikhil.ramachandran.184"><i class="icon-social-facebook"></i></a>
+													<a href="https://twitter.com/mamarama98"><i class="icon-social-twitter"></i></a>
+													<a href="https://www.linkedin.com/in/nikhil-ramachandran-155519134/"><i class="icon-social-linkedin"></i></a>
 												</div>
 											</div>
 											<div class="mu-team-info">
