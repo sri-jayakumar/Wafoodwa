@@ -161,6 +161,16 @@ $action = "view_friend";        // default action
     			</td>
   			</tr>
 		</table>
+		<iframe 
+				width="300" 
+				height="170" 
+				frameborder="0" 
+				scrolling="no" 
+				marginheight="0" 
+				marginwidth="0" 
+				src=<?php echo "https://maps.google.com/maps?q=".urlencode($restaurant['restaurants_location_address'])."&amp;output=embed"?>
+				>
+			</iframe>
 	<?php endforeach; ?>
 	</div>
 	&nbsp;
