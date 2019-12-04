@@ -49,7 +49,20 @@ $action = "view_friend";        // default action
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
     <!-- Montserrat for Title -->
   	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
- 
+  	<style> 
+  	input[type=submit]{
+  		border-radius: 5px;
+  		background-color: #459FD8;
+  		color: white;
+  		width: 12%;
+  	}
+
+  	iframe{
+  		margin-top: 3%;
+  	}
+
+  	</style>
+
   </head>
 	<title>Reviews</title>
 </head>
@@ -94,92 +107,100 @@ $action = "view_friend";        // default action
 	<h5>Restaurant</h5>
 	&nbsp;
 	<div class="container">
-		<b><font size="7">
-		<?php foreach ($onerest as $restaurant): ?>
-			<p>
-				<?php 
-					$rest_name = $restaurant['restaurants_name'];
-					if(count($_SESSION['followed']) > 0){
-						foreach($_SESSION['followed'] as $rest){
-							if($rest['restaurant'] == $rest_name){
-								$is_following = TRUE;
-							}
-						}
-					}	
-					echo $rest_name;
-				?> 
-			</p>
-		<?php endforeach; ?>
-		</font></b>
-		<?php foreach ($onerest as $restaurant): ?>
-			<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?> </p>
-			<img class="img-responsive" src=<?php 
-				if(empty($thumbnail)){
-					echo "assets/images/portfolio/img-1.jpeg";
-				} else {
-					echo $thumbnail;
-				};
-			?> alt="image" style="height:280px;width:640px;">
-		<?php endforeach; ?>
-		&nbsp;
-		<?php
-			if(isset($_POST['follow'])){
-				followRestaurant(!$is_following, $_SESSION['username'], $rest_name);
-				$_SESSION['followed'] = getFollowedRestaurants($_SESSION['username']);
-				$is_following = !$is_following;
-			}
-		?>
-		<form method="post">
-			<input type="submit" name="follow" value=<?php echo ($is_following ? "Unfollow" : "Follow"); ?> />
-		</form>
-		<h1><font size="5">Details</font></h1>
-		<?php foreach ($onerest as $restaurant): ?>
+		<div class="row">
+				<b><font size="7">
+				<?php foreach ($onerest as $restaurant): ?>
+					<p>
+						<?php 
+							$rest_name = $restaurant['restaurants_name'];
+							if(count($_SESSION['followed']) > 0){
+								foreach($_SESSION['followed'] as $rest){
+									if($rest['restaurant'] == $rest_name){
+										$is_following = TRUE;
+									}
+								}
+							}	
+							echo $rest_name;
+						?> 
+					</p>
+				<?php endforeach; ?>
+				</font></b>
+				<?php foreach ($onerest as $restaurant): ?>
+					<p><?php $thumbnail = $restaurant['restaurants_featured_image']; ?> </p>
+					<img class="img-responsive" src=<?php 
+						if(empty($thumbnail)){
+							echo "assets/images/portfolio/img-1.jpeg";
+						} else {
+							echo $thumbnail;
+						};
+					?> alt="image" style="height:280px;width:640px;">
+				<?php endforeach; ?>
+				&nbsp;
+				<?php
+					if(isset($_POST['follow'])){
+						followRestaurant(!$is_following, $_SESSION['username'], $rest_name);
+						$_SESSION['followed'] = getFollowedRestaurants($_SESSION['username']);
+						$is_following = !$is_following;
+					}
+				?>
+				<form method="post">
+					<input type="submit" name="follow" value=<?php echo ($is_following ? "Unfollow" : "Follow"); ?> />
+				</form>
+			</div>
 
-		<table width="500px" height="100px">
-  			<tr>
-    			<td align="left">Restaurant Address</td> 
-    			<td align="left">
-    				<?php echo $restaurant['restaurants_location_address']; ?>
-    			</td>
-  			</tr>
-  			<tr>
-    			<b><td align="10px">Phone Number</td></b>
-    			<td align="left">
-    				<?php echo $restaurant['restaurants_phone_numbers']; ?>
-    			</td>
-  			</tr>
-  			<tr>
-    			<b><td align="left">Cuisine Type</td></b>
-    			<td align="left">
-    				<?php echo $restaurant['restaurants_cuisines']; ?>
-    				</td>
-  			</tr>
-  			<tr>
-    			<b><td align="left">Price Range</td></b>
-    			<td align="left">
-    				<?php echo $restaurant['restaurants_price_range'] . " out of 5"; ?>
-    			</td>
-  			</tr>
-  			<tr>
-    			<b><td align="left">Aggregate Review</td></b>
-    			<td align="left">
-    				<?php echo $restaurant['restaurants_user_rating_aggregate_rating'] . " out of 5"; ?>
-    			</td>
-  			</tr>
-  			<tr>
-    			<b><td align="left">Average Price for Two</td></b>
-    			<td align="left">
-    				<?php echo '$' . $restaurant['restaurants_average_cost_for_two']; ?>
-    			</td>
-  			</tr>
-  			<tr>
-    			<b><td align="left">Menu URL</td></b>
-    			<td align="left">
-    				<a href="<?php echo $restaurant['restaurants_menu_url']; ?>" target="_blank">Menu</a>
-    			</td>
-  			</tr>
-		</table>
-		<iframe 
+		<div class="row">
+			<div class=”col-md-6”>
+			<h1><font size="5">Details</font></h1>
+			<?php foreach ($onerest as $restaurant): ?>
+
+			<table width="500px" height="100px">
+	  			<tr>
+	    			<td align="left">Restaurant Address</td> 
+	    			<td align="left">
+	    				<?php echo $restaurant['restaurants_location_address']; ?>
+	    			</td>
+	  			</tr>
+	  			<tr>
+	    			<b><td align="10px">Phone Number</td></b>
+	    			<td align="left">
+	    				<?php echo $restaurant['restaurants_phone_numbers']; ?>
+	    			</td>
+	  			</tr>
+	  			<tr>
+	    			<b><td align="left">Cuisine Type</td></b>
+	    			<td align="left">
+	    				<?php echo $restaurant['restaurants_cuisines']; ?>
+	    				</td>
+	  			</tr>
+	  			<tr>
+	    			<b><td align="left">Price Range</td></b>
+	    			<td align="left">
+	    				<?php echo $restaurant['restaurants_price_range'] . " out of 5"; ?>
+	    			</td>
+	  			</tr>
+	  			<tr>
+	    			<b><td align="left">Aggregate Review</td></b>
+	    			<td align="left">
+	    				<?php echo $restaurant['restaurants_user_rating_aggregate_rating'] . " out of 5"; ?>
+	    			</td>
+	  			</tr>
+	  			<tr>
+	    			<b><td align="left">Average Price for Two</td></b>
+	    			<td align="left">
+	    				<?php echo '$' . $restaurant['restaurants_average_cost_for_two']; ?>
+	    			</td>
+	  			</tr>
+	  			<tr>
+	    			<b><td align="left">Menu URL</td></b>
+	    			<td align="left">
+	    				<a href="<?php echo $restaurant['restaurants_menu_url']; ?>" target="_blank">Menu</a>
+	    			</td>
+	  			</tr>
+			</table>
+			<?php endforeach; ?>
+		</div>
+			<iframe 
+			    id="iframe" class="col-md-6"
 				width="300" 
 				height="170" 
 				frameborder="0" 
@@ -189,9 +210,11 @@ $action = "view_friend";        // default action
 				src=<?php echo "https://maps.google.com/maps?q=".urlencode($restaurant['restaurants_location_address'])."&amp;output=embed"?>
 				>
 			</iframe>
-	<?php endforeach; ?>
+		</div>
 	</div>
+</div>
 	&nbsp;
+
 
 	<div class="container">
 		<h1><font size="5">Reviews</font></h1>
