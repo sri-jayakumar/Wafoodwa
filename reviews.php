@@ -169,13 +169,13 @@ $action = "view_friend";        // default action
   			<tr>
     			<b><td align="left">Average Price for Two</td></b>
     			<td align="left">
-    				<?php echo $restaurant['restaurants_average_cost_for_two']; ?>
+    				<?php echo '$' . $restaurant['restaurants_average_cost_for_two']; ?>
     			</td>
   			</tr>
   			<tr>
     			<b><td align="left">Menu URL</td></b>
     			<td align="left">
-    				<li><a href="<?php echo $restaurant['restaurants_menu_url']; ?>">Menu</a></li>
+    				<a href="<?php echo $restaurant['restaurants_menu_url']; ?>" target="_blank">Menu</a>
     			</td>
   			</tr>
 		</table>
